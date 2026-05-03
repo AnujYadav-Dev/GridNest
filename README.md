@@ -25,7 +25,6 @@ GridNest is designed for developers who value aesthetic precision as much as fun
 gridnest/
 ├── frontend/          # Next.js 15 Documentation & Library
 ├── backend/           # Django REST API
-└── AGENTS.md          # AI IDE Instructions & Design Standards
 ```
 
 ## 🚀 Getting Started
