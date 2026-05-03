@@ -14,7 +14,7 @@ const Progress = forwardRef<HTMLDivElement, ProgressProps>(
     return (
       <div
         ref={ref}
-        className={twMerge(clsx('relative h-2 w-full overflow-hidden rounded-full bg-[var(--forge-surface-2)]', className))}
+        className={twMerge(clsx('relative h-2 w-full overflow-hidden rounded-full bg-[var(--gridnest-surface-2)]', className))}
         role="progressbar"
         aria-valuemin={0}
         aria-valuemax={max}
@@ -25,9 +25,9 @@ const Progress = forwardRef<HTMLDivElement, ProgressProps>(
           <motion.div
             className={clsx(
               'h-full w-full rounded-full opacity-70',
-              variant === 'default' ? 'bg-[var(--forge-accent)]' :
-              variant === 'success' ? 'bg-[var(--forge-success)]' :
-              variant === 'warning' ? 'bg-[var(--forge-warning)]' : 'bg-[var(--forge-danger)]'
+              variant === 'default' ? 'bg-[var(--gridnest-accent)]' :
+              variant === 'success' ? 'bg-[var(--gridnest-success)]' :
+              variant === 'warning' ? 'bg-[var(--gridnest-warning)]' : 'bg-[var(--gridnest-danger)]'
             )}
             animate={{
               x: ['-100%', '100%'],
@@ -42,9 +42,9 @@ const Progress = forwardRef<HTMLDivElement, ProgressProps>(
           <motion.div
             className={clsx(
               'h-full rounded-full transition-colors duration-300',
-              variant === 'default' ? 'bg-[var(--forge-accent)]' :
-              variant === 'success' ? 'bg-[var(--forge-success)]' :
-              variant === 'warning' ? 'bg-[var(--forge-warning)]' : 'bg-[var(--forge-danger)]'
+              variant === 'default' ? 'bg-[var(--gridnest-accent)]' :
+              variant === 'success' ? 'bg-[var(--gridnest-success)]' :
+              variant === 'warning' ? 'bg-[var(--gridnest-warning)]' : 'bg-[var(--gridnest-danger)]'
             )}
             initial={{ width: 0 }}
             animate={{ width: `${percentage}%` }}

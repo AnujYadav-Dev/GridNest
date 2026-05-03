@@ -11,7 +11,7 @@ export default function DocsLayout({ children }: { children: React.ReactNode }) 
   const [query, setQuery] = useState('')
 
   return (
-    <div className="flex flex-col min-h-screen bg-[var(--forge-bg)]">
+    <div className="flex flex-col min-h-screen bg-[var(--gridnest-bg)]">
       <Navbar />
       <SearchPalette query={query} setQuery={setQuery} />
 

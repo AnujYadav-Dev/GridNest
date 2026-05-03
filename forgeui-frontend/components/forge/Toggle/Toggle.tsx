@@ -9,12 +9,12 @@ import { cva, type VariantProps } from 'class-variance-authority'
 import { ToggleProps } from './Toggle.types'
 
 const toggleVariants = cva(
-  'inline-flex items-center justify-center rounded-[var(--forge-radius-md)] text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--forge-accent)] disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-[var(--forge-accent)] data-[state=on]:text-white',
+  'inline-flex items-center justify-center rounded-[var(--gridnest-radius-md)] text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gridnest-accent)] disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-[var(--gridnest-accent)] data-[state=on]:text-white',
   {
     variants: {
       variant: {
-        default: 'bg-transparent hover:bg-[var(--forge-surface-2)] text-[var(--forge-text-primary)]',
-        outline: 'border border-[var(--forge-border)] bg-transparent hover:bg-[var(--forge-surface-2)] text-[var(--forge-text-primary)]',
+        default: 'bg-transparent hover:bg-[var(--gridnest-surface-2)] text-[var(--gridnest-text-primary)]',
+        outline: 'border border-[var(--gridnest-border)] bg-transparent hover:bg-[var(--gridnest-surface-2)] text-[var(--gridnest-text-primary)]',
       },
       size: {
         sm: 'h-8 px-2',

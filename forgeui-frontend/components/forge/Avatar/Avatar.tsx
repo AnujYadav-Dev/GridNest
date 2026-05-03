@@ -7,7 +7,7 @@ import { cva, type VariantProps } from 'class-variance-authority'
 import { AvatarProps } from './Avatar.types'
 
 const avatarVariants = cva(
-  'relative inline-flex items-center justify-center rounded-full bg-[var(--forge-surface-2)] text-[var(--forge-text-primary)] font-body font-medium select-none overflow-hidden ring-1 ring-[var(--forge-border)]',
+  'relative inline-flex items-center justify-center rounded-full bg-[var(--gridnest-surface-2)] text-[var(--gridnest-text-primary)] font-body font-medium select-none overflow-hidden ring-1 ring-[var(--gridnest-border)]',
   {
     variants: {
       size: {
@@ -45,11 +45,11 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps & VariantProps<typeof avat
         {status && (
           <span
             className={clsx(
-              "absolute bottom-0 right-0 block rounded-full ring-2 ring-[var(--forge-bg)]",
+              "absolute bottom-0 right-0 block rounded-full ring-2 ring-[var(--gridnest-bg)]",
               size === 'sm' ? 'h-2 w-2' : size === 'md' ? 'h-2.5 w-2.5' : size === 'lg' ? 'h-3 w-3' : 'h-4 w-4',
-              status === 'online' ? 'bg-[var(--forge-success)]' :
-              status === 'busy' ? 'bg-[var(--forge-danger)]' :
-              status === 'away' ? 'bg-[var(--forge-warning)]' : 'bg-[var(--forge-text-muted)]'
+              status === 'online' ? 'bg-[var(--gridnest-success)]' :
+              status === 'busy' ? 'bg-[var(--gridnest-danger)]' :
+              status === 'away' ? 'bg-[var(--gridnest-warning)]' : 'bg-[var(--gridnest-text-muted)]'
             )}
           />
         )}

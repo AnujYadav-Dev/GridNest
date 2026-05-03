@@ -16,7 +16,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         {label && (
           <label 
             htmlFor={id} 
-            className={clsx("text-sm font-medium transition-colors", hasError ? "text-[var(--forge-danger)]" : "text-[var(--forge-text-primary)]", disabled && "opacity-50")}
+            className={clsx("text-sm font-medium transition-colors", hasError ? "text-[var(--gridnest-danger)]" : "text-[var(--gridnest-text-primary)]", disabled && "opacity-50")}
           >
             {label}
           </label>
@@ -24,7 +24,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         
         <div className="relative flex items-center w-full">
           {iconLeft && (
-            <div className={clsx("absolute left-3 flex items-center justify-center pointer-events-none", hasError ? "text-[var(--forge-danger)]" : "text-[var(--forge-text-secondary)]", disabled && "opacity-50")}>
+            <div className={clsx("absolute left-3 flex items-center justify-center pointer-events-none", hasError ? "text-[var(--gridnest-danger)]" : "text-[var(--gridnest-text-secondary)]", disabled && "opacity-50")}>
               {iconLeft}
             </div>
           )}
@@ -37,10 +37,10 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             onBlur={(e) => { setIsFocused(false); props.onBlur?.(e) }}
             className={twMerge(
               clsx(
-                "flex h-10 w-full rounded-[var(--forge-radius-md)] border bg-[var(--forge-surface-2)] px-3 py-2 text-sm text-[var(--forge-text-primary)] font-body placeholder:text-[var(--forge-text-muted)] transition-all outline-none",
+                "flex h-10 w-full rounded-[var(--gridnest-radius-md)] border bg-[var(--gridnest-surface-2)] px-3 py-2 text-sm text-[var(--gridnest-text-primary)] font-body placeholder:text-[var(--gridnest-text-muted)] transition-all outline-none",
                 hasError 
-                  ? "border-[var(--forge-danger)] focus:ring-2 focus:ring-[var(--forge-danger)]/20" 
-                  : "border-[var(--forge-border)] hover:border-[var(--forge-border-hover)] focus:border-[var(--forge-accent)] focus:ring-2 focus:ring-[var(--forge-accent)]/20",
+                  ? "border-[var(--gridnest-danger)] focus:ring-2 focus:ring-[var(--gridnest-danger)]/20" 
+                  : "border-[var(--gridnest-border)] hover:border-[var(--gridnest-border-hover)] focus:border-[var(--gridnest-accent)] focus:ring-2 focus:ring-[var(--gridnest-accent)]/20",
                 iconLeft && "pl-10",
                 iconRight && "pr-10",
                 disabled && "cursor-not-allowed opacity-50",
@@ -63,7 +63,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
               initial={{ opacity: 0, height: 0, marginTop: 0 }}
               animate={{ opacity: 1, height: 'auto', marginTop: 4 }}
               exit={{ opacity: 0, height: 0, marginTop: 0 }}
-              className={clsx("text-xs", hasError ? "text-[var(--forge-danger)]" : "text-[var(--forge-text-secondary)]")}
+              className={clsx("text-xs", hasError ? "text-[var(--gridnest-danger)]" : "text-[var(--gridnest-text-secondary)]")}
             >
               {typeof error === 'string' ? error : helperText}
             </motion.p>

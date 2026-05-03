@@ -46,7 +46,7 @@ export function CodeBlock({ code, showLineNumbers = true }: CodeBlockProps) {
 
   return (
     <div className="relative group">
-      <div className="overflow-x-auto bg-[#0D0D0F] rounded-b-[var(--forge-radius-lg)]">
+      <div className="overflow-x-auto bg-[#0D0D0F] rounded-b-[var(--gridnest-radius-lg)]">
         <div className="flex">
           {/* Line numbers */}
           {showLineNumbers && (
@@ -54,7 +54,7 @@ export function CodeBlock({ code, showLineNumbers = true }: CodeBlockProps) {
               {lines.map((_, i) => (
                 <div
                   key={i}
-                  className="text-xs leading-6 text-[var(--forge-text-muted)] font-mono"
+                  className="text-xs leading-6 text-[var(--gridnest-text-muted)] font-mono"
                 >
                   {i + 1}
                 </div>
@@ -64,7 +64,7 @@ export function CodeBlock({ code, showLineNumbers = true }: CodeBlockProps) {
           {/* Code */}
           <pre
             ref={preRef}
-            className="flex-1 overflow-x-auto py-5 pr-12 pl-2 text-xs leading-6 font-mono text-[var(--forge-text-secondary)] whitespace-pre"
+            className="flex-1 overflow-x-auto py-5 pr-12 pl-2 text-xs leading-6 font-mono text-[var(--gridnest-text-secondary)] whitespace-pre"
           />
         </div>
       </div>
@@ -74,7 +74,7 @@ export function CodeBlock({ code, showLineNumbers = true }: CodeBlockProps) {
         id="code-block-copy"
         onClick={() => void copy(code)}
         aria-label="Copy code"
-        className="absolute top-3 right-3 flex items-center gap-1.5 px-2 py-1 rounded-[var(--forge-radius-sm)] bg-[var(--forge-surface-2)] border border-[var(--forge-border)] text-[var(--forge-text-muted)] hover:text-[var(--forge-text-primary)] text-xs transition-all opacity-0 group-hover:opacity-100 focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[var(--forge-accent)]"
+        className="absolute top-3 right-3 flex items-center gap-1.5 px-2 py-1 rounded-[var(--gridnest-radius-sm)] bg-[var(--gridnest-surface-2)] border border-[var(--gridnest-border)] text-[var(--gridnest-text-muted)] hover:text-[var(--gridnest-text-primary)] text-xs transition-all opacity-0 group-hover:opacity-100 focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[var(--gridnest-accent)]"
       >
         <AnimatePresence mode="wait" initial={false}>
           {copied ? (
@@ -86,7 +86,7 @@ export function CodeBlock({ code, showLineNumbers = true }: CodeBlockProps) {
               transition={{ duration: 0.12 }}
               className="flex items-center gap-1"
             >
-              <Check size={11} className="text-[var(--forge-success)]" /> Copied
+              <Check size={11} className="text-[var(--gridnest-success)]" /> Copied
             </motion.span>
           ) : (
             <motion.span

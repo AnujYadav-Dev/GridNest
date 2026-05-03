@@ -43,11 +43,11 @@ const Toast = forwardRef<HTMLDivElement, ToastProps>(
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
             className={twMerge(
               clsx(
-                "group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-[var(--forge-radius-lg)] border p-4 shadow-[var(--forge-shadow-md)] transition-all",
-                variant === 'default' ? "border-[var(--forge-border)] bg-[var(--forge-surface-2)] text-[var(--forge-text-primary)]" :
-                variant === 'success' ? "border-[var(--forge-success)]/20 bg-[var(--forge-success)]/10 text-[var(--forge-success)]" :
-                variant === 'warning' ? "border-[var(--forge-warning)]/20 bg-[var(--forge-warning)]/10 text-[var(--forge-warning)]" :
-                "border-[var(--forge-danger)]/20 bg-[var(--forge-danger)]/10 text-[var(--forge-danger)]",
+                "group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-[var(--gridnest-radius-lg)] border p-4 shadow-[var(--gridnest-shadow-md)] transition-all",
+                variant === 'default' ? "border-[var(--gridnest-border)] bg-[var(--gridnest-surface-2)] text-[var(--gridnest-text-primary)]" :
+                variant === 'success' ? "border-[var(--gridnest-success)]/20 bg-[var(--gridnest-success)]/10 text-[var(--gridnest-success)]" :
+                variant === 'warning' ? "border-[var(--gridnest-warning)]/20 bg-[var(--gridnest-warning)]/10 text-[var(--gridnest-warning)]" :
+                "border-[var(--gridnest-danger)]/20 bg-[var(--gridnest-danger)]/10 text-[var(--gridnest-danger)]",
                 className
               )
             )}
@@ -60,7 +60,7 @@ const Toast = forwardRef<HTMLDivElement, ToastProps>(
               <div className="flex flex-col gap-1 w-full">
                 {title && <h3 className="text-sm font-semibold font-sans">{title}</h3>}
                 {description && (
-                  <div className={clsx("text-sm font-body opacity-90", variant === 'default' && "text-[var(--forge-text-secondary)]")}>
+                  <div className={clsx("text-sm font-body opacity-90", variant === 'default' && "text-[var(--gridnest-text-secondary)]")}>
                     {description}
                   </div>
                 )}
@@ -79,10 +79,10 @@ const Toast = forwardRef<HTMLDivElement, ToastProps>(
               <motion.div 
                 className={clsx(
                   "absolute bottom-0 left-0 h-1",
-                  variant === 'default' ? "bg-[var(--forge-accent)]" :
-                  variant === 'success' ? "bg-[var(--forge-success)]" :
-                  variant === 'warning' ? "bg-[var(--forge-warning)]" :
-                  "bg-[var(--forge-danger)]"
+                  variant === 'default' ? "bg-[var(--gridnest-accent)]" :
+                  variant === 'success' ? "bg-[var(--gridnest-success)]" :
+                  variant === 'warning' ? "bg-[var(--gridnest-warning)]" :
+                  "bg-[var(--gridnest-danger)]"
                 )}
                 initial={{ width: "100%" }}
                 animate={{ width: "0%" }}

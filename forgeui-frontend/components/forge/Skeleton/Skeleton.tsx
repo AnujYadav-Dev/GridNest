@@ -5,13 +5,13 @@ import { cva, type VariantProps } from 'class-variance-authority'
 import { SkeletonProps } from './Skeleton.types'
 
 const skeletonVariants = cva(
-  'animate-shimmer bg-[var(--forge-surface-2)]',
+  'animate-shimmer bg-[var(--gridnest-surface-2)]',
   {
     variants: {
       variant: {
-        text: 'h-4 w-full rounded-[var(--forge-radius-md)]',
+        text: 'h-4 w-full rounded-[var(--gridnest-radius-md)]',
         circle: 'h-10 w-10 rounded-full',
-        rectangle: 'h-full w-full rounded-[var(--forge-radius-lg)]',
+        rectangle: 'h-full w-full rounded-[var(--gridnest-radius-lg)]',
       }
     },
     defaultVariants: {

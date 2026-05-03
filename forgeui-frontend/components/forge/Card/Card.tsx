@@ -8,16 +8,16 @@ import { CardProps } from './Card.types'
 import { motion } from 'framer-motion'
 
 const cardVariants = cva(
-  'rounded-[var(--forge-radius-xl)] bg-[var(--forge-surface)] text-[var(--forge-text-primary)] overflow-hidden transition-all duration-300',
+  'rounded-[var(--gridnest-radius-xl)] bg-[var(--gridnest-surface)] text-[var(--gridnest-text-primary)] overflow-hidden transition-all duration-300',
   {
     variants: {
       variant: {
         default: '',
-        elevated: 'shadow-[var(--forge-shadow-md)]',
-        bordered: 'border border-[var(--forge-border)]',
+        elevated: 'shadow-[var(--gridnest-shadow-md)]',
+        bordered: 'border border-[var(--gridnest-border)]',
       },
       interactive: {
-        true: 'cursor-pointer hover:border-[var(--forge-accent)] hover:shadow-[var(--forge-shadow-md)] hover:-translate-y-1',
+        true: 'cursor-pointer hover:border-[var(--gridnest-accent)] hover:shadow-[var(--gridnest-shadow-md)] hover:-translate-y-1',
         false: '',
       }
     },
@@ -68,14 +68,14 @@ CardHeader.displayName = 'CardHeader'
 
 export const CardTitle = forwardRef<HTMLHeadingElement, React.HTMLAttributes<HTMLHeadingElement>>(
   ({ className, ...props }, ref) => (
-    <h3 ref={ref} className={twMerge(clsx("text-lg font-semibold leading-none tracking-tight font-sans text-[var(--forge-text-primary)]", className))} {...props} />
+    <h3 ref={ref} className={twMerge(clsx("text-lg font-semibold leading-none tracking-tight font-sans text-[var(--gridnest-text-primary)]", className))} {...props} />
   )
 )
 CardTitle.displayName = 'CardTitle'
 
 export const CardDescription = forwardRef<HTMLParagraphElement, React.HTMLAttributes<HTMLParagraphElement>>(
   ({ className, ...props }, ref) => (
-    <p ref={ref} className={twMerge(clsx("text-sm text-[var(--forge-text-secondary)] font-body", className))} {...props} />
+    <p ref={ref} className={twMerge(clsx("text-sm text-[var(--gridnest-text-secondary)] font-body", className))} {...props} />
   )
 )
 CardDescription.displayName = 'CardDescription'

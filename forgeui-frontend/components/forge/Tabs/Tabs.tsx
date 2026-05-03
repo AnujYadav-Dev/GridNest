@@ -24,7 +24,7 @@ const Tabs = forwardRef<React.ElementRef<typeof TabsPrimitive.Root>, TabsProps>(
       >
         <TabsPrimitive.List
           className={clsx(
-            "flex shrink-0 border-[var(--forge-border)] overflow-x-auto no-scrollbar",
+            "flex shrink-0 border-[var(--gridnest-border)] overflow-x-auto no-scrollbar",
             orientation === 'horizontal' ? "flex-row border-b" : "flex-col border-r w-48"
           )}
         >
@@ -34,8 +34,8 @@ const Tabs = forwardRef<React.ElementRef<typeof TabsPrimitive.Root>, TabsProps>(
               value={tab.value}
               className={clsx(
                 "relative flex items-center justify-center px-4 py-2.5 text-sm font-medium font-body transition-colors outline-none",
-                "text-[var(--forge-text-secondary)] hover:text-[var(--forge-text-primary)] data-[state=active]:text-[var(--forge-accent)]",
-                "focus-visible:ring-2 focus-visible:ring-[var(--forge-accent)] focus-visible:ring-offset-2",
+                "text-[var(--gridnest-text-secondary)] hover:text-[var(--gridnest-text-primary)] data-[state=active]:text-[var(--gridnest-accent)]",
+                "focus-visible:ring-2 focus-visible:ring-[var(--gridnest-accent)] focus-visible:ring-offset-2",
                 orientation === 'horizontal' ? "border-b-2 border-transparent" : "border-r-2 border-transparent w-full justify-start"
               )}
             >
@@ -45,7 +45,7 @@ const Tabs = forwardRef<React.ElementRef<typeof TabsPrimitive.Root>, TabsProps>(
               {/* Note: In a real implementation we would need to know the currently active tab in state to use layoutId properly,
                   but for simplicity we'll rely on the CSS border or an absolute div */}
               <div className={clsx(
-                "absolute bg-[var(--forge-accent)] transition-all duration-300 opacity-0 group-data-[state=active]:opacity-100",
+                "absolute bg-[var(--gridnest-accent)] transition-all duration-300 opacity-0 group-data-[state=active]:opacity-100",
                 orientation === 'horizontal' ? "bottom-[-2px] left-0 right-0 h-[2px]" : "right-[-2px] top-0 bottom-0 w-[2px]"
               )} />
             </TabsPrimitive.Trigger>
@@ -56,7 +56,7 @@ const Tabs = forwardRef<React.ElementRef<typeof TabsPrimitive.Root>, TabsProps>(
           <TabsPrimitive.Content
             key={tab.value}
             value={tab.value}
-            className="flex-1 mt-4 outline-none focus-visible:ring-2 focus-visible:ring-[var(--forge-accent)] focus-visible:ring-offset-2 rounded-[var(--forge-radius-sm)]"
+            className="flex-1 mt-4 outline-none focus-visible:ring-2 focus-visible:ring-[var(--gridnest-accent)] focus-visible:ring-offset-2 rounded-[var(--gridnest-radius-sm)]"
           >
             <motion.div
               initial={{ opacity: 0, y: 5 }}

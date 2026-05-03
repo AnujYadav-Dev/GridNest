@@ -8,7 +8,7 @@ export function ThemeSwitcher() {
   const { isDark, toggleTheme, mounted } = useTheme()
 
   if (!mounted) {
-    return <div className="h-8 w-8 rounded-[var(--forge-radius-md)] bg-[var(--forge-surface-2)]" />
+    return <div className="h-8 w-8 rounded-[var(--gridnest-radius-md)] bg-[var(--gridnest-surface-2)]" />
   }
 
   return (
@@ -16,7 +16,7 @@ export function ThemeSwitcher() {
       id="theme-switcher"
       onClick={toggleTheme}
       aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
-      className="flex items-center justify-center h-8 w-8 rounded-[var(--forge-radius-md)] text-[var(--forge-text-secondary)] hover:text-[var(--forge-text-primary)] hover:bg-[var(--forge-surface-2)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--forge-accent)]"
+      className="flex items-center justify-center h-8 w-8 rounded-[var(--gridnest-radius-md)] text-[var(--gridnest-text-secondary)] hover:text-[var(--gridnest-text-primary)] hover:bg-[var(--gridnest-surface-2)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gridnest-accent)]"
     >
       <motion.div
         key={isDark ? 'moon' : 'sun'}

@@ -9,14 +9,14 @@ import { ButtonProps } from './Button.types'
 import { Loader2 } from 'lucide-react'
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center gap-2 rounded-[var(--forge-radius-md)] font-body font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--forge-accent)] disabled:opacity-40 disabled:pointer-events-none select-none',
+  'inline-flex items-center justify-center gap-2 rounded-[var(--gridnest-radius-md)] font-body font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gridnest-accent)] disabled:opacity-40 disabled:pointer-events-none select-none',
   {
     variants: {
       variant: {
-        primary: 'bg-[var(--forge-accent)] text-white hover:bg-[var(--forge-accent-hover)] shadow-[var(--forge-shadow-glow)]',
-        secondary: 'bg-[var(--forge-surface-2)] text-[var(--forge-text-primary)] border border-[var(--forge-border)] hover:border-[var(--forge-border-hover)]',
-        ghost: 'text-[var(--forge-text-secondary)] hover:bg-[var(--forge-surface-2)] hover:text-[var(--forge-text-primary)]',
-        danger: 'bg-[var(--forge-danger)] text-white hover:opacity-90',
+        primary: 'bg-[var(--gridnest-accent)] text-white hover:bg-[var(--gridnest-accent-hover)] shadow-[var(--gridnest-shadow-glow)]',
+        secondary: 'bg-[var(--gridnest-surface-2)] text-[var(--gridnest-text-primary)] border border-[var(--gridnest-border)] hover:border-[var(--gridnest-border-hover)]',
+        ghost: 'text-[var(--gridnest-text-secondary)] hover:bg-[var(--gridnest-surface-2)] hover:text-[var(--gridnest-text-primary)]',
+        danger: 'bg-[var(--gridnest-danger)] text-white hover:opacity-90',
       },
       size: {
         sm: 'h-8 px-3 text-sm',

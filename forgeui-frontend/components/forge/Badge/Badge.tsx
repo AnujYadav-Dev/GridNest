@@ -5,14 +5,14 @@ import { cva, type VariantProps } from 'class-variance-authority'
 import { BadgeProps } from './Badge.types'
 
 const badgeVariants = cva(
-  'inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-semibold font-body transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--forge-accent)] focus:ring-offset-2',
+  'inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-semibold font-body transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--gridnest-accent)] focus:ring-offset-2',
   {
     variants: {
       variant: {
-        default: 'bg-[var(--forge-surface-2)] text-[var(--forge-text-primary)] border border-[var(--forge-border)]',
-        success: 'bg-[var(--forge-success)]/10 text-[var(--forge-success)] border border-[var(--forge-success)]/20',
-        warning: 'bg-[var(--forge-warning)]/10 text-[var(--forge-warning)] border border-[var(--forge-warning)]/20',
-        danger: 'bg-[var(--forge-danger)]/10 text-[var(--forge-danger)] border border-[var(--forge-danger)]/20',
+        default: 'bg-[var(--gridnest-surface-2)] text-[var(--gridnest-text-primary)] border border-[var(--gridnest-border)]',
+        success: 'bg-[var(--gridnest-success)]/10 text-[var(--gridnest-success)] border border-[var(--gridnest-success)]/20',
+        warning: 'bg-[var(--gridnest-warning)]/10 text-[var(--gridnest-warning)] border border-[var(--gridnest-warning)]/20',
+        danger: 'bg-[var(--gridnest-danger)]/10 text-[var(--gridnest-danger)] border border-[var(--gridnest-danger)]/20',
       }
     },
     defaultVariants: {
@@ -30,16 +30,16 @@ const Badge = forwardRef<HTMLSpanElement, BadgeProps & VariantProps<typeof badge
             {live && (
               <span className={clsx(
                 "animate-pulse-ring absolute inline-flex h-full w-full rounded-full opacity-75",
-                variant === 'default' ? 'bg-[var(--forge-text-primary)]' : 
-                variant === 'success' ? 'bg-[var(--forge-success)]' :
-                variant === 'warning' ? 'bg-[var(--forge-warning)]' : 'bg-[var(--forge-danger)]'
+                variant === 'default' ? 'bg-[var(--gridnest-text-primary)]' : 
+                variant === 'success' ? 'bg-[var(--gridnest-success)]' :
+                variant === 'warning' ? 'bg-[var(--gridnest-warning)]' : 'bg-[var(--gridnest-danger)]'
               )} />
             )}
             <span className={clsx(
               "relative inline-flex rounded-full h-2 w-2",
-              variant === 'default' ? 'bg-[var(--forge-text-primary)]' : 
-              variant === 'success' ? 'bg-[var(--forge-success)]' :
-              variant === 'warning' ? 'bg-[var(--forge-warning)]' : 'bg-[var(--forge-danger)]'
+              variant === 'default' ? 'bg-[var(--gridnest-text-primary)]' : 
+              variant === 'success' ? 'bg-[var(--gridnest-success)]' :
+              variant === 'warning' ? 'bg-[var(--gridnest-warning)]' : 'bg-[var(--gridnest-danger)]'
             )} />
           </span>
         )}

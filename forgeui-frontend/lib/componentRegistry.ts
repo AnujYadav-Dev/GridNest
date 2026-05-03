@@ -37,7 +37,7 @@ export default function Example() {
       'Uses native <button> element for full keyboard support',
       'Disabled state communicated via aria-disabled',
       'Loading state sets aria-busy and visually indicated by spinner',
-      'Focus ring uses --forge-accent color with focus-visible selector',
+      'Focus ring uses --gridnest-accent color with focus-visible selector',
     ],
     related: ['badge', 'input', 'toggle'],
   },
@@ -321,7 +321,7 @@ export default function Example() {
     code: `import { Accordion } from '@/components/forge'
 
 const items = [
-  { id: 'q1', title: 'What is ForgeUI?', content: 'A production-grade design system.' },
+  { id: 'q1', title: 'What is GridNest?', content: 'A production-grade design system.' },
   { id: 'q2', title: 'Is it free?', content: 'Yes, MIT licensed.' },
   { id: 'q3', title: 'Does it support TypeScript?', content: '100% TypeScript.' },
 ]
@@ -488,7 +488,7 @@ export default function Example() {
     slug: 'tooltip',
     name: 'Tooltip',
     category: 'feedback',
-    description: 'Radix-powered tooltip with custom ForgeUI styling and smooth appear/disappear animation.',
+    description: 'Radix-powered tooltip with custom GridNest styling and smooth appear/disappear animation.',
     isNew: false,
     importStatement: `import { Tooltip } from '@/components/forge'`,
     code: `import { Tooltip } from '@/components/forge'

@@ -32,11 +32,11 @@ export default function DashboardPage() {
     >
       {/* Header */}
       <motion.div variants={shouldReduceMotion ? undefined : fadeUp} className="mb-10">
-        <p className="text-xs font-mono uppercase tracking-widest text-[var(--forge-text-muted)] mb-1">Dashboard</p>
-        <h1 className="font-sans text-2xl font-bold text-[var(--forge-text-primary)] tracking-tight">
+        <p className="text-xs font-mono uppercase tracking-widest text-[var(--gridnest-text-muted)] mb-1">Dashboard</p>
+        <h1 className="font-sans text-2xl font-bold text-[var(--gridnest-text-primary)] tracking-tight">
           {user ? `Welcome back, ${user.username}` : 'Your Dashboard'}
         </h1>
-        <p className="text-sm text-[var(--forge-text-secondary)] mt-1">
+        <p className="text-sm text-[var(--gridnest-text-secondary)] mt-1">
           Track your saved components and custom themes.
         </p>
       </motion.div>
@@ -49,16 +49,16 @@ export default function DashboardPage() {
             <Link
               key={stat.label}
               href={stat.href}
-              className="group flex items-center gap-4 rounded-[var(--forge-radius-lg)] border border-[var(--forge-border)] bg-[var(--forge-surface)] p-5 hover:border-[var(--forge-accent)] hover:shadow-[var(--forge-shadow-glow)] transition-all"
+              className="group flex items-center gap-4 rounded-[var(--gridnest-radius-lg)] border border-[var(--gridnest-border)] bg-[var(--gridnest-surface)] p-5 hover:border-[var(--gridnest-accent)] hover:shadow-[var(--gridnest-shadow-glow)] transition-all"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-[var(--forge-radius-md)] bg-[var(--forge-accent-subtle)] text-[var(--forge-accent)]">
+              <div className="flex h-10 w-10 items-center justify-center rounded-[var(--gridnest-radius-md)] bg-[var(--gridnest-accent-subtle)] text-[var(--gridnest-accent)]">
                 <Icon size={18} />
               </div>
               <div>
-                <p className="font-sans text-2xl font-bold text-[var(--forge-text-primary)]">{stat.value}</p>
-                <p className="text-xs text-[var(--forge-text-secondary)]">{stat.label}</p>
+                <p className="font-sans text-2xl font-bold text-[var(--gridnest-text-primary)]">{stat.value}</p>
+                <p className="text-xs text-[var(--gridnest-text-secondary)]">{stat.label}</p>
               </div>
-              <ArrowRight size={14} className="ml-auto text-[var(--forge-text-muted)] group-hover:text-[var(--forge-accent)] transition-colors" />
+              <ArrowRight size={14} className="ml-auto text-[var(--gridnest-text-muted)] group-hover:text-[var(--gridnest-accent)] transition-colors" />
             </Link>
           )
         })}
@@ -66,7 +66,7 @@ export default function DashboardPage() {
 
       {/* Quick links */}
       <motion.div variants={shouldReduceMotion ? undefined : fadeUp}>
-        <h2 className="font-sans text-sm font-semibold text-[var(--forge-text-primary)] mb-4">Quick Links</h2>
+        <h2 className="font-sans text-sm font-semibold text-[var(--gridnest-text-primary)] mb-4">Quick Links</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {[
             { href: '/components', label: 'Browse all 14 components', sub: 'Explore the full component library' },
@@ -77,13 +77,13 @@ export default function DashboardPage() {
             <Link
               key={link.href}
               href={link.href}
-              className="flex items-center justify-between rounded-[var(--forge-radius-md)] border border-[var(--forge-border)] bg-[var(--forge-surface)] px-4 py-3 hover:border-[var(--forge-border-hover)] transition-colors group"
+              className="flex items-center justify-between rounded-[var(--gridnest-radius-md)] border border-[var(--gridnest-border)] bg-[var(--gridnest-surface)] px-4 py-3 hover:border-[var(--gridnest-border-hover)] transition-colors group"
             >
               <div>
-                <p className="text-sm font-medium text-[var(--forge-text-primary)]">{link.label}</p>
-                <p className="text-xs text-[var(--forge-text-muted)]">{link.sub}</p>
+                <p className="text-sm font-medium text-[var(--gridnest-text-primary)]">{link.label}</p>
+                <p className="text-xs text-[var(--gridnest-text-muted)]">{link.sub}</p>
               </div>
-              <ArrowRight size={14} className="shrink-0 text-[var(--forge-text-muted)] group-hover:text-[var(--forge-accent)] transition-colors" />
+              <ArrowRight size={14} className="shrink-0 text-[var(--gridnest-text-muted)] group-hover:text-[var(--gridnest-accent)] transition-colors" />
             </Link>
           ))}
         </div>

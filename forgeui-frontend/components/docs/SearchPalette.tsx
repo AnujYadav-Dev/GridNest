@@ -80,28 +80,28 @@ export function SearchPalette({ query, setQuery }: SearchPaletteProps) {
             initial="hidden"
             animate="visible"
             exit="hidden"
-            className="fixed left-1/2 top-[20%] z-50 w-full max-w-lg -translate-x-1/2 rounded-[var(--forge-radius-lg)] border border-[var(--forge-border)] bg-[var(--forge-surface)] shadow-[var(--forge-shadow-md)] overflow-hidden"
+            className="fixed left-1/2 top-[20%] z-50 w-full max-w-lg -translate-x-1/2 rounded-[var(--gridnest-radius-lg)] border border-[var(--gridnest-border)] bg-[var(--gridnest-surface)] shadow-[var(--gridnest-shadow-md)] overflow-hidden"
           >
             {/* Search input */}
-            <div className="flex items-center gap-3 border-b border-[var(--forge-border)] px-4 py-3">
-              <Search size={16} className="shrink-0 text-[var(--forge-text-muted)]" />
+            <div className="flex items-center gap-3 border-b border-[var(--gridnest-border)] px-4 py-3">
+              <Search size={16} className="shrink-0 text-[var(--gridnest-text-muted)]" />
               <input
                 ref={inputRef}
                 id="search-palette-input"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search components..."
-                className="flex-1 bg-transparent text-sm text-[var(--forge-text-primary)] placeholder:text-[var(--forge-text-muted)] outline-none"
+                className="flex-1 bg-transparent text-sm text-[var(--gridnest-text-primary)] placeholder:text-[var(--gridnest-text-muted)] outline-none"
               />
               {query && (
                 <button
                   onClick={() => setQuery('')}
-                  className="text-[var(--forge-text-muted)] hover:text-[var(--forge-text-secondary)]"
+                  className="text-[var(--gridnest-text-muted)] hover:text-[var(--gridnest-text-secondary)]"
                 >
                   <X size={14} />
                 </button>
               )}
-              <kbd className="hidden sm:flex items-center gap-0.5 rounded border border-[var(--forge-border)] px-1.5 py-0.5 text-[10px] text-[var(--forge-text-muted)] font-mono">
+              <kbd className="hidden sm:flex items-center gap-0.5 rounded border border-[var(--gridnest-border)] px-1.5 py-0.5 text-[10px] text-[var(--gridnest-text-muted)] font-mono">
                 Esc
               </kbd>
             </div>
@@ -109,7 +109,7 @@ export function SearchPalette({ query, setQuery }: SearchPaletteProps) {
             {/* Results */}
             <ul className="max-h-72 overflow-y-auto py-2">
               {filtered.length === 0 ? (
-                <li className="px-4 py-8 text-center text-sm text-[var(--forge-text-muted)]">
+                <li className="px-4 py-8 text-center text-sm text-[var(--gridnest-text-muted)]">
                   No components found.
                 </li>
               ) : (
@@ -118,10 +118,10 @@ export function SearchPalette({ query, setQuery }: SearchPaletteProps) {
                     <Link
                       href={`/components/${c.slug}`}
                       onClick={() => { setSearchOpen(false); setQuery('') }}
-                      className="flex items-center justify-between px-4 py-2.5 text-sm text-[var(--forge-text-primary)] hover:bg-[var(--forge-surface-2)] transition-colors"
+                      className="flex items-center justify-between px-4 py-2.5 text-sm text-[var(--gridnest-text-primary)] hover:bg-[var(--gridnest-surface-2)] transition-colors"
                     >
                       <span>{c.label}</span>
-                      <span className="text-[10px] text-[var(--forge-text-muted)] font-mono uppercase tracking-wider">
+                      <span className="text-[10px] text-[var(--gridnest-text-muted)] font-mono uppercase tracking-wider">
                         {c.category}
                       </span>
                     </Link>
@@ -130,12 +130,12 @@ export function SearchPalette({ query, setQuery }: SearchPaletteProps) {
               )}
             </ul>
 
-            <div className="border-t border-[var(--forge-border)] px-4 py-2 flex gap-3">
-              <span className="text-[10px] text-[var(--forge-text-muted)] flex items-center gap-1">
-                <kbd className="rounded border border-[var(--forge-border)] px-1 py-0.5 font-mono">↑↓</kbd> navigate
+            <div className="border-t border-[var(--gridnest-border)] px-4 py-2 flex gap-3">
+              <span className="text-[10px] text-[var(--gridnest-text-muted)] flex items-center gap-1">
+                <kbd className="rounded border border-[var(--gridnest-border)] px-1 py-0.5 font-mono">↑↓</kbd> navigate
               </span>
-              <span className="text-[10px] text-[var(--forge-text-muted)] flex items-center gap-1">
-                <kbd className="rounded border border-[var(--forge-border)] px-1 py-0.5 font-mono">⏎</kbd> open
+              <span className="text-[10px] text-[var(--gridnest-text-muted)] flex items-center gap-1">
+                <kbd className="rounded border border-[var(--gridnest-border)] px-1 py-0.5 font-mono">⏎</kbd> open
               </span>
             </div>
           </motion.div>

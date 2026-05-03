@@ -1,59 +1,59 @@
 :root {
   /* Color - Base */
-  --forge-bg: #0A0A0B;
-  --forge-surface: #111113;
-  --forge-surface-2: #1A1A1E;
-  --forge-border: #2A2A2E;
-  --forge-border-hover: #3A3A3E;
+  --gridnest-bg: #0A0A0B;
+  --gridnest-surface: #111113;
+  --gridnest-surface-2: #1A1A1E;
+  --gridnest-border: #2A2A2E;
+  --gridnest-border-hover: #3A3A3E;
 
   /* Color - Text */
-  --forge-text-primary: #F0F0F2;
-  --forge-text-secondary: #8A8A92;
-  --forge-text-muted: #4A4A52;
+  --gridnest-text-primary: #F0F0F2;
+  --gridnest-text-secondary: #8A8A92;
+  --gridnest-text-muted: #4A4A52;
 
   /* Color - Accent */
-  --forge-accent: #6366F1;
+  --gridnest-accent: #6366F1;
   /* Indigo - primary brand */
-  --forge-accent-hover: #818CF8;
-  --forge-accent-subtle: #6366F120;
-  --forge-success: #22C55E;
-  --forge-warning: #F59E0B;
-  --forge-danger: #EF4444;
+  --gridnest-accent-hover: #818CF8;
+  --gridnest-accent-subtle: #6366F120;
+  --gridnest-success: #22C55E;
+  --gridnest-warning: #F59E0B;
+  --gridnest-danger: #EF4444;
 
   /* Typography */
-  --forge-font-sans: 'Syne', sans-serif;
+  --gridnest-font-sans: 'Syne', sans-serif;
   /* Display headings */
-  --forge-font-body: 'DM Sans', sans-serif;
+  --gridnest-font-body: 'DM Sans', sans-serif;
   /* Body text */
-  --forge-font-mono: 'JetBrains Mono', monospace;
+  --gridnest-font-mono: 'JetBrains Mono', monospace;
   /* Code blocks */
 
   /* Spacing scale */
-  --forge-space-1: 4px;
-  --forge-space-2: 8px;
-  --forge-space-3: 12px;
-  --forge-space-4: 16px;
-  --forge-space-6: 24px;
-  --forge-space-8: 32px;
-  --forge-space-12: 48px;
-  --forge-space-16: 64px;
+  --gridnest-space-1: 4px;
+  --gridnest-space-2: 8px;
+  --gridnest-space-3: 12px;
+  --gridnest-space-4: 16px;
+  --gridnest-space-6: 24px;
+  --gridnest-space-8: 32px;
+  --gridnest-space-12: 48px;
+  --gridnest-space-16: 64px;
 
   /* Radius */
-  --forge-radius-sm: 4px;
-  --forge-radius-md: 8px;
-  --forge-radius-lg: 12px;
-  --forge-radius-xl: 16px;
-  --forge-radius-full: 9999px;
+  --gridnest-radius-sm: 4px;
+  --gridnest-radius-md: 8px;
+  --gridnest-radius-lg: 12px;
+  --gridnest-radius-xl: 16px;
+  --gridnest-radius-full: 9999px;
 
   /* Shadow */
-  --forge-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
-  --forge-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
-  --forge-shadow-glow: 0 0 24px rgba(99, 102, 241, 0.2);
+  --gridnest-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --gridnest-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
+  --gridnest-shadow-glow: 0 0 24px rgba(99, 102, 241, 0.2);
 
   /* Motion */
-  --forge-duration-fast: 150ms;
-  --forge-duration-normal: 250ms;
-  --forge-duration-slow: 400ms;
-  --forge-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  --forge-ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --gridnest-duration-fast: 150ms;
+  --gridnest-duration-normal: 250ms;
+  --gridnest-duration-slow: 400ms;
+  --gridnest-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --gridnest-ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }

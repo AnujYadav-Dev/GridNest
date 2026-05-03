@@ -74,21 +74,21 @@ export default function RegisterPage() {
     >
       <motion.div
         variants={shouldReduceMotion ? undefined : fadeUp}
-        className="rounded-[var(--forge-radius-xl)] border border-[var(--forge-border)] bg-[var(--forge-surface)] p-8 shadow-[var(--forge-shadow-md)]"
+        className="rounded-[var(--gridnest-radius-xl)] border border-[var(--gridnest-border)] bg-[var(--gridnest-surface)] p-8 shadow-[var(--gridnest-shadow-md)]"
       >
         <motion.div variants={shouldReduceMotion ? undefined : fadeUp} className="mb-8">
-          <h1 className="font-sans text-2xl font-bold text-[var(--forge-text-primary)] tracking-tight mb-1">
+          <h1 className="font-sans text-2xl font-bold text-[var(--gridnest-text-primary)] tracking-tight mb-1">
             Create account
           </h1>
-          <p className="text-sm text-[var(--forge-text-secondary)]">
-            Get started with ForgeUI today
+          <p className="text-sm text-[var(--gridnest-text-secondary)]">
+            Get started with GridNest today
           </p>
         </motion.div>
 
         <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-5">
           {fields.map((field) => (
             <motion.div key={field.id} variants={shouldReduceMotion ? undefined : fadeUp}>
-              <label htmlFor={field.id} className="mb-1.5 block text-xs font-medium text-[var(--forge-text-primary)]">
+              <label htmlFor={field.id} className="mb-1.5 block text-xs font-medium text-[var(--gridnest-text-primary)]">
                 {field.label}
               </label>
               <input
@@ -97,19 +97,19 @@ export default function RegisterPage() {
                 autoComplete={field.autocomplete}
                 placeholder={field.placeholder}
                 {...register(field.name)}
-                className={`w-full rounded-[var(--forge-radius-md)] border bg-[var(--forge-bg)] px-3 py-2.5 text-sm text-[var(--forge-text-primary)] placeholder:text-[var(--forge-text-muted)] outline-none transition-colors focus:ring-2 focus:ring-[var(--forge-accent)] ${
-                  errors[field.name] ? 'border-[var(--forge-danger)]' : 'border-[var(--forge-border)] hover:border-[var(--forge-border-hover)]'
+                className={`w-full rounded-[var(--gridnest-radius-md)] border bg-[var(--gridnest-bg)] px-3 py-2.5 text-sm text-[var(--gridnest-text-primary)] placeholder:text-[var(--gridnest-text-muted)] outline-none transition-colors focus:ring-2 focus:ring-[var(--gridnest-accent)] ${
+                  errors[field.name] ? 'border-[var(--gridnest-danger)]' : 'border-[var(--gridnest-border)] hover:border-[var(--gridnest-border-hover)]'
                 }`}
               />
               {errors[field.name] && (
-                <p className="mt-1 text-xs text-[var(--forge-danger)]">{errors[field.name]?.message}</p>
+                <p className="mt-1 text-xs text-[var(--gridnest-danger)]">{errors[field.name]?.message}</p>
               )}
             </motion.div>
           ))}
 
           {/* Password */}
           <motion.div variants={shouldReduceMotion ? undefined : fadeUp}>
-            <label htmlFor="reg-password" className="mb-1.5 block text-xs font-medium text-[var(--forge-text-primary)]">
+            <label htmlFor="reg-password" className="mb-1.5 block text-xs font-medium text-[var(--gridnest-text-primary)]">
               Password
             </label>
             <div className="relative">
@@ -119,28 +119,28 @@ export default function RegisterPage() {
                 autoComplete="new-password"
                 placeholder="Min 8 characters"
                 {...register('password')}
-                className={`w-full rounded-[var(--forge-radius-md)] border bg-[var(--forge-bg)] px-3 py-2.5 pr-10 text-sm text-[var(--forge-text-primary)] placeholder:text-[var(--forge-text-muted)] outline-none transition-colors focus:ring-2 focus:ring-[var(--forge-accent)] ${
-                  errors.password ? 'border-[var(--forge-danger)]' : 'border-[var(--forge-border)] hover:border-[var(--forge-border-hover)]'
+                className={`w-full rounded-[var(--gridnest-radius-md)] border bg-[var(--gridnest-bg)] px-3 py-2.5 pr-10 text-sm text-[var(--gridnest-text-primary)] placeholder:text-[var(--gridnest-text-muted)] outline-none transition-colors focus:ring-2 focus:ring-[var(--gridnest-accent)] ${
+                  errors.password ? 'border-[var(--gridnest-danger)]' : 'border-[var(--gridnest-border)] hover:border-[var(--gridnest-border-hover)]'
                 }`}
               />
               <button
                 type="button"
                 id="reg-toggle-password"
                 onClick={() => setShowPass((p) => !p)}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--forge-text-muted)] hover:text-[var(--forge-text-secondary)] transition-colors"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--gridnest-text-muted)] hover:text-[var(--gridnest-text-secondary)] transition-colors"
                 aria-label={showPass ? 'Hide password' : 'Show password'}
               >
                 {showPass ? <EyeOff size={14} /> : <Eye size={14} />}
               </button>
             </div>
             {errors.password && (
-              <p className="mt-1 text-xs text-[var(--forge-danger)]">{errors.password.message}</p>
+              <p className="mt-1 text-xs text-[var(--gridnest-danger)]">{errors.password.message}</p>
             )}
           </motion.div>
 
           {/* Confirm Password */}
           <motion.div variants={shouldReduceMotion ? undefined : fadeUp}>
-            <label htmlFor="reg-confirm" className="mb-1.5 block text-xs font-medium text-[var(--forge-text-primary)]">
+            <label htmlFor="reg-confirm" className="mb-1.5 block text-xs font-medium text-[var(--gridnest-text-primary)]">
               Confirm Password
             </label>
             <input
@@ -149,12 +149,12 @@ export default function RegisterPage() {
               autoComplete="new-password"
               placeholder="Repeat your password"
               {...register('password2')}
-              className={`w-full rounded-[var(--forge-radius-md)] border bg-[var(--forge-bg)] px-3 py-2.5 text-sm text-[var(--forge-text-primary)] placeholder:text-[var(--forge-text-muted)] outline-none transition-colors focus:ring-2 focus:ring-[var(--forge-accent)] ${
-                errors.password2 ? 'border-[var(--forge-danger)]' : 'border-[var(--forge-border)] hover:border-[var(--forge-border-hover)]'
+              className={`w-full rounded-[var(--gridnest-radius-md)] border bg-[var(--gridnest-bg)] px-3 py-2.5 text-sm text-[var(--gridnest-text-primary)] placeholder:text-[var(--gridnest-text-muted)] outline-none transition-colors focus:ring-2 focus:ring-[var(--gridnest-accent)] ${
+                errors.password2 ? 'border-[var(--gridnest-danger)]' : 'border-[var(--gridnest-border)] hover:border-[var(--gridnest-border-hover)]'
               }`}
             />
             {errors.password2 && (
-              <p className="mt-1 text-xs text-[var(--forge-danger)]">{errors.password2.message}</p>
+              <p className="mt-1 text-xs text-[var(--gridnest-danger)]">{errors.password2.message}</p>
             )}
           </motion.div>
 
@@ -162,7 +162,7 @@ export default function RegisterPage() {
             <motion.p
               initial={{ opacity: 0, y: -4 }}
               animate={{ opacity: 1, y: 0 }}
-              className="rounded-[var(--forge-radius-md)] border border-[var(--forge-danger)]/30 bg-[var(--forge-danger)]/10 px-3 py-2 text-xs text-[var(--forge-danger)]"
+              className="rounded-[var(--gridnest-radius-md)] border border-[var(--gridnest-danger)]/30 bg-[var(--gridnest-danger)]/10 px-3 py-2 text-xs text-[var(--gridnest-danger)]"
             >
               {apiError}
             </motion.p>
@@ -174,7 +174,7 @@ export default function RegisterPage() {
             id="register-submit"
             disabled={isSubmitting}
             whileTap={shouldReduceMotion ? undefined : { scale: 0.98 }}
-            className="flex w-full items-center justify-center gap-2 h-10 rounded-[var(--forge-radius-md)] bg-[var(--forge-accent)] text-white text-sm font-medium hover:bg-[var(--forge-accent-hover)] transition-colors disabled:opacity-50 disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--forge-accent)]"
+            className="flex w-full items-center justify-center gap-2 h-10 rounded-[var(--gridnest-radius-md)] bg-[var(--gridnest-accent)] text-white text-sm font-medium hover:bg-[var(--gridnest-accent-hover)] transition-colors disabled:opacity-50 disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gridnest-accent)]"
           >
             {isSubmitting ? (
               <span className="h-4 w-4 rounded-full border-2 border-white/30 border-t-white animate-spin" />
@@ -185,9 +185,9 @@ export default function RegisterPage() {
           </motion.button>
         </form>
 
-        <motion.p variants={shouldReduceMotion ? undefined : fadeUp} className="mt-6 text-center text-xs text-[var(--forge-text-muted)]">
+        <motion.p variants={shouldReduceMotion ? undefined : fadeUp} className="mt-6 text-center text-xs text-[var(--gridnest-text-muted)]">
           Already have an account?{' '}
-          <Link href="/login" className="text-[var(--forge-accent)] hover:text-[var(--forge-accent-hover)] transition-colors">
+          <Link href="/login" className="text-[var(--gridnest-accent)] hover:text-[var(--gridnest-accent-hover)] transition-colors">
             Sign in
           </Link>
         </motion.p>

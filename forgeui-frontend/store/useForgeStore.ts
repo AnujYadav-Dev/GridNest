@@ -47,7 +47,7 @@ export const useForgeStore = create<ForgeStore>()(
       setSearchOpen: (open) => set({ searchOpen: open }),
     }),
     {
-      name: 'forge-store',
+      name: 'gridnest-store',
       partialize: (state) => ({
         savedSlugs: state.savedSlugs,
         themePrefs: state.themePrefs,

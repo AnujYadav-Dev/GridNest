@@ -48,7 +48,7 @@ export function CustomCursor() {
 
   return (
     <motion.div
-      className="pointer-events-none fixed left-0 top-0 z-[9999] h-4 w-4 rounded-full bg-[var(--forge-accent)] mix-blend-difference"
+      className="pointer-events-none fixed left-0 top-0 z-[9999] h-4 w-4 rounded-full bg-[var(--gridnest-accent)] mix-blend-difference"
       style={{
         x,
         y,

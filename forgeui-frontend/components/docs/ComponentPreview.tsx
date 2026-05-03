@@ -18,11 +18,11 @@ export function ComponentPreview({ children, code, title }: ComponentPreviewProp
   const { copied, copy } = useCopyToClipboard()
 
   return (
-    <div className="rounded-[var(--forge-radius-lg)] border border-[var(--forge-border)] overflow-hidden">
+    <div className="rounded-[var(--gridnest-radius-lg)] border border-[var(--gridnest-border)] overflow-hidden">
       {/* Toolbar */}
-      <div className="flex items-center justify-between border-b border-[var(--forge-border)] bg-[var(--forge-surface)] px-4 py-2">
+      <div className="flex items-center justify-between border-b border-[var(--gridnest-border)] bg-[var(--gridnest-surface)] px-4 py-2">
         {title && (
-          <span className="text-xs text-[var(--forge-text-muted)] font-mono">{title}</span>
+          <span className="text-xs text-[var(--gridnest-text-muted)] font-mono">{title}</span>
         )}
         <div className="flex items-center gap-1 ml-auto">
           {/* Tab switcher */}
@@ -31,24 +31,24 @@ export function ComponentPreview({ children, code, title }: ComponentPreviewProp
               key={t}
               id={`preview-tab-${t}`}
               onClick={() => setTab(t)}
-              className={`px-3 py-1 text-xs rounded-[var(--forge-radius-sm)] transition-colors capitalize ${
+              className={`px-3 py-1 text-xs rounded-[var(--gridnest-radius-sm)] transition-colors capitalize ${
                 tab === t
-                  ? 'bg-[var(--forge-surface-2)] text-[var(--forge-text-primary)]'
-                  : 'text-[var(--forge-text-muted)] hover:text-[var(--forge-text-secondary)]'
+                  ? 'bg-[var(--gridnest-surface-2)] text-[var(--gridnest-text-primary)]'
+                  : 'text-[var(--gridnest-text-muted)] hover:text-[var(--gridnest-text-secondary)]'
               }`}
             >
               {t}
             </button>
           ))}
 
-          <div className="mx-2 h-4 w-px bg-[var(--forge-border)]" />
+          <div className="mx-2 h-4 w-px bg-[var(--gridnest-border)]" />
 
           {/* Preview theme toggle */}
           {tab === 'preview' && (
             <button
               id="preview-theme-toggle"
               onClick={() => setPreviewTheme(previewTheme === 'dark' ? 'light' : 'dark')}
-              className="flex items-center justify-center h-6 w-6 rounded-[var(--forge-radius-sm)] text-[var(--forge-text-muted)] hover:text-[var(--forge-text-secondary)] transition-colors"
+              className="flex items-center justify-center h-6 w-6 rounded-[var(--gridnest-radius-sm)] text-[var(--gridnest-text-muted)] hover:text-[var(--gridnest-text-secondary)] transition-colors"
               aria-label="Toggle preview theme"
             >
               {previewTheme === 'dark' ? <Monitor size={12} /> : <Sun size={12} />}
@@ -59,7 +59,7 @@ export function ComponentPreview({ children, code, title }: ComponentPreviewProp
           <button
             id="copy-code-btn"
             onClick={() => void copy(code)}
-            className="flex items-center gap-1.5 px-2 py-1 text-xs rounded-[var(--forge-radius-sm)] text-[var(--forge-text-muted)] hover:text-[var(--forge-text-secondary)] transition-colors"
+            className="flex items-center gap-1.5 px-2 py-1 text-xs rounded-[var(--gridnest-radius-sm)] text-[var(--gridnest-text-muted)] hover:text-[var(--gridnest-text-secondary)] transition-colors"
             aria-label="Copy code"
           >
             <AnimatePresence mode="wait" initial={false}>
@@ -71,7 +71,7 @@ export function ComponentPreview({ children, code, title }: ComponentPreviewProp
                   exit={{ scale: 0.8, opacity: 0 }}
                   transition={{ duration: 0.15 }}
                 >
-                  <Check size={12} className="text-[var(--forge-success)]" />
+                  <Check size={12} className="text-[var(--gridnest-success)]" />
                 </motion.span>
               ) : (
                 <motion.span
@@ -102,7 +102,7 @@ export function ComponentPreview({ children, code, title }: ComponentPreviewProp
             className={`min-h-48 flex items-center justify-center p-8 ${
               previewTheme === 'light'
                 ? 'bg-white'
-                : 'bg-[var(--forge-bg)]'
+                : 'bg-[var(--gridnest-bg)]'
             }`}
           >
             {children}

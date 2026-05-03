@@ -8,9 +8,9 @@
 @variant dark (&:is(.dark *));
 
 body {
-  background-color: var(--forge-bg);
-  color: var(--forge-text-primary);
-  /* The layout.tsx also has font-body bg-[var(--forge-bg)] text-[var(--forge-text-primary)] */
+  background-color: var(--gridnest-bg);
+  color: var(--gridnest-text-primary);
+  /* The layout.tsx also has font-body bg-[var(--gridnest-bg)] text-[var(--gridnest-text-primary)] */
 }
 
 /* ===== Minimal Professional Scrollbar ===== */

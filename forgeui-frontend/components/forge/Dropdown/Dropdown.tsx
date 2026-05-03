@@ -23,7 +23,7 @@ const Dropdown = forwardRef<React.ElementRef<typeof DropdownMenuPrimitive.Conten
             asChild
             className={twMerge(
               clsx(
-                "z-50 min-w-[8rem] overflow-hidden rounded-[var(--forge-radius-md)] border border-[var(--forge-border)] bg-[var(--forge-surface-2)] p-1 shadow-[var(--forge-shadow-md)]",
+                "z-50 min-w-[8rem] overflow-hidden rounded-[var(--gridnest-radius-md)] border border-[var(--gridnest-border)] bg-[var(--gridnest-surface-2)] p-1 shadow-[var(--gridnest-shadow-md)]",
                 contentClassName
               )
             )}
@@ -51,8 +51,8 @@ export const DropdownItem = forwardRef<React.ElementRef<typeof DropdownMenuPrimi
       ref={ref}
       className={twMerge(
         clsx(
-          "relative flex cursor-default select-none items-center rounded-[var(--forge-radius-sm)] px-2 py-1.5 text-sm font-body outline-none transition-colors",
-          "focus:bg-[var(--forge-accent)] focus:text-white data-[disabled]:pointer-events-none data-[disabled]:opacity-50 text-[var(--forge-text-primary)]",
+          "relative flex cursor-default select-none items-center rounded-[var(--gridnest-radius-sm)] px-2 py-1.5 text-sm font-body outline-none transition-colors",
+          "focus:bg-[var(--gridnest-accent)] focus:text-white data-[disabled]:pointer-events-none data-[disabled]:opacity-50 text-[var(--gridnest-text-primary)]",
           className
         )
       )}
@@ -66,7 +66,7 @@ export const DropdownSeparator = forwardRef<React.ElementRef<typeof DropdownMenu
   ({ className, ...props }, ref) => (
     <DropdownMenuPrimitive.Separator
       ref={ref}
-      className={twMerge(clsx("-mx-1 my-1 h-px bg-[var(--forge-border)]", className))}
+      className={twMerge(clsx("-mx-1 my-1 h-px bg-[var(--gridnest-border)]", className))}
       {...props}
     />
   )
@@ -77,7 +77,7 @@ export const DropdownLabel = forwardRef<React.ElementRef<typeof DropdownMenuPrim
   ({ className, ...props }, ref) => (
     <DropdownMenuPrimitive.Label
       ref={ref}
-      className={twMerge(clsx("px-2 py-1.5 text-xs font-semibold text-[var(--forge-text-muted)]", className))}
+      className={twMerge(clsx("px-2 py-1.5 text-xs font-semibold text-[var(--gridnest-text-muted)]", className))}
       {...props}
     />
   )

@@ -18,10 +18,10 @@ const BUTTON_VARIANTS = ['primary', 'secondary', 'ghost', 'danger'] as const
 type BtnVariant = (typeof BUTTON_VARIANTS)[number]
 
 const variantStyles: Record<BtnVariant, string> = {
-  primary: 'bg-[var(--forge-accent)] text-white shadow-[var(--forge-shadow-glow)] hover:bg-[var(--forge-accent-hover)]',
-  secondary: 'bg-[var(--forge-surface-2)] text-[var(--forge-text-primary)] border border-[var(--forge-border)] hover:border-[var(--forge-border-hover)]',
-  ghost: 'text-[var(--forge-text-secondary)] hover:bg-[var(--forge-surface-2)] hover:text-[var(--forge-text-primary)]',
-  danger: 'bg-[var(--forge-danger)] text-white hover:opacity-90',
+  primary: 'bg-[var(--gridnest-accent)] text-white shadow-[var(--gridnest-shadow-glow)] hover:bg-[var(--gridnest-accent-hover)]',
+  secondary: 'bg-[var(--gridnest-surface-2)] text-[var(--gridnest-text-primary)] border border-[var(--gridnest-border)] hover:border-[var(--gridnest-border-hover)]',
+  ghost: 'text-[var(--gridnest-text-secondary)] hover:bg-[var(--gridnest-surface-2)] hover:text-[var(--gridnest-text-primary)]',
+  danger: 'bg-[var(--gridnest-danger)] text-white hover:opacity-90',
 }
 
 const STATS = [
@@ -53,16 +53,16 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage: `
-            linear-gradient(var(--forge-text-primary) 1px, transparent 1px),
-            linear-gradient(90deg, var(--forge-text-primary) 1px, transparent 1px)
+            linear-gradient(var(--gridnest-text-primary) 1px, transparent 1px),
+            linear-gradient(90deg, var(--gridnest-text-primary) 1px, transparent 1px)
           `,
           backgroundSize: '40px 40px',
         }}
       />
 
       {/* Floating gradient orbs */}
-      <div className="pointer-events-none absolute -top-32 left-1/4 h-96 w-96 rounded-full bg-[var(--forge-accent)] opacity-[0.06] blur-[100px]" />
-      <div className="pointer-events-none absolute top-48 right-1/4 h-64 w-64 rounded-full bg-[var(--forge-accent-hover)] opacity-[0.04] blur-[80px]" />
+      <div className="pointer-events-none absolute -top-32 left-1/4 h-96 w-96 rounded-full bg-[var(--gridnest-accent)] opacity-[0.06] blur-[100px]" />
+      <div className="pointer-events-none absolute top-48 right-1/4 h-64 w-64 rounded-full bg-[var(--gridnest-accent-hover)] opacity-[0.04] blur-[80px]" />
 
       {/* Hero content */}
       <motion.div
@@ -76,8 +76,8 @@ export function Hero() {
           variants={shouldReduceMotion ? undefined : fadeUp}
           className="mb-8 flex items-center gap-2"
         >
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-[var(--forge-border)] bg-[var(--forge-surface)] px-3 py-1 text-xs text-[var(--forge-text-secondary)]">
-            <Zap size={10} className="text-[var(--forge-accent)]" />
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-[var(--gridnest-border)] bg-[var(--gridnest-surface)] px-3 py-1 text-xs text-[var(--gridnest-text-secondary)]">
+            <Zap size={10} className="text-[var(--gridnest-accent)]" />
             14 production-grade components - copy-paste ready
           </span>
         </motion.div>
@@ -87,14 +87,14 @@ export function Hero() {
           <div>
             <motion.h1
               variants={shouldReduceMotion ? undefined : fadeUp}
-              className="font-sans text-5xl lg:text-6xl font-bold tracking-tight text-[var(--forge-text-primary)] leading-[1.08] mb-6"
+              className="font-sans text-5xl lg:text-6xl font-bold tracking-tight text-[var(--gridnest-text-primary)] leading-[1.08] mb-6"
             >
               Build UI.{' '}
               <br />
               <span
                 className="relative"
                 style={{
-                  background: 'linear-gradient(135deg, var(--forge-accent) 0%, var(--forge-accent-hover) 100%)',
+                  background: 'linear-gradient(135deg, var(--gridnest-accent) 0%, var(--gridnest-accent-hover) 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
@@ -106,9 +106,9 @@ export function Hero() {
 
             <motion.p
               variants={shouldReduceMotion ? undefined : fadeUp}
-              className="text-lg text-[var(--forge-text-secondary)] leading-relaxed mb-10 max-w-md"
+              className="text-lg text-[var(--gridnest-text-secondary)] leading-relaxed mb-10 max-w-md"
             >
-              ForgeUI is a design system built with editorial precision and developer
+              GridNest is a design system built with editorial precision and developer
               utility in mind. 14 accessible, animated, TypeScript-first components
               ready for production.
             </motion.p>
@@ -120,7 +120,7 @@ export function Hero() {
               <Link
                 href="/components"
                 id="hero-explore-btn"
-                className="inline-flex items-center gap-2 h-11 px-5 rounded-[var(--forge-radius-md)] bg-[var(--forge-accent)] text-white text-sm font-medium hover:bg-[var(--forge-accent-hover)] transition-colors shadow-[var(--forge-shadow-glow)]"
+                className="inline-flex items-center gap-2 h-11 px-5 rounded-[var(--gridnest-radius-md)] bg-[var(--gridnest-accent)] text-white text-sm font-medium hover:bg-[var(--gridnest-accent-hover)] transition-colors shadow-[var(--gridnest-shadow-glow)]"
               >
                 Explore Components
                 <ArrowRight size={14} />
@@ -130,7 +130,7 @@ export function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 id="hero-github-btn"
-                className="inline-flex items-center gap-2 h-11 px-5 rounded-[var(--forge-radius-md)] border border-[var(--forge-border)] text-[var(--forge-text-secondary)] text-sm font-medium hover:text-[var(--forge-text-primary)] hover:border-[var(--forge-border-hover)] transition-colors"
+                className="inline-flex items-center gap-2 h-11 px-5 rounded-[var(--gridnest-radius-md)] border border-[var(--gridnest-border)] text-[var(--gridnest-text-secondary)] text-sm font-medium hover:text-[var(--gridnest-text-primary)] hover:border-[var(--gridnest-border-hover)] transition-colors"
               >
                 <GithubIcon size={14} />
                 View on GitHub
@@ -143,12 +143,12 @@ export function Hero() {
             variants={shouldReduceMotion ? undefined : scaleIn}
             className="relative"
           >
-            <div className="rounded-[var(--forge-radius-xl)] border border-[var(--forge-border)] bg-[var(--forge-surface)] p-8 shadow-[var(--forge-shadow-md)]">
-              <p className="mb-1 text-[10px] font-mono uppercase tracking-widest text-[var(--forge-text-muted)]">
+            <div className="rounded-[var(--gridnest-radius-xl)] border border-[var(--gridnest-border)] bg-[var(--gridnest-surface)] p-8 shadow-[var(--gridnest-shadow-md)]">
+              <p className="mb-1 text-[10px] font-mono uppercase tracking-widest text-[var(--gridnest-text-muted)]">
                 Live preview
               </p>
-              <p className="mb-6 text-xs text-[var(--forge-text-secondary)]">
-                Button - variant: <code className="font-mono text-[var(--forge-accent)]">{activeVariant}</code>
+              <p className="mb-6 text-xs text-[var(--gridnest-text-secondary)]">
+                Button - variant: <code className="font-mono text-[var(--gridnest-accent)]">{activeVariant}</code>
               </p>
 
               <div className="flex flex-wrap gap-3 mb-8">
@@ -157,7 +157,7 @@ export function Hero() {
                     key={v}
                     id={`hero-variant-${v}`}
                     onClick={() => setActiveVariant(v)}
-                    className={`h-9 px-4 text-sm font-medium rounded-[var(--forge-radius-md)] transition-all duration-200 ${variantStyles[v]} ${activeVariant === v ? 'ring-2 ring-[var(--forge-accent)] ring-offset-2 ring-offset-[var(--forge-surface)]' : ''
+                    className={`h-9 px-4 text-sm font-medium rounded-[var(--gridnest-radius-md)] transition-all duration-200 ${variantStyles[v]} ${activeVariant === v ? 'ring-2 ring-[var(--gridnest-accent)] ring-offset-2 ring-offset-[var(--gridnest-surface)]' : ''
                       }`}
                   >
                     {v.charAt(0).toUpperCase() + v.slice(1)}
@@ -166,17 +166,17 @@ export function Hero() {
               </div>
 
               {/* Component code snippet */}
-              <div className="rounded-[var(--forge-radius-md)] bg-[#0D0D0F] p-4 font-mono text-xs">
+              <div className="rounded-[var(--gridnest-radius-md)] bg-[#0D0D0F] p-4 font-mono text-xs">
                 <span className="text-[#818CF8]">import</span>
-                <span className="text-[var(--forge-text-secondary)]"> {'{ Button }'} </span>
+                <span className="text-[var(--gridnest-text-secondary)]"> {'{ Button }'} </span>
                 <span className="text-[#818CF8]">from</span>
                 <span className="text-[#86EFAC]"> &apos;@/components/forge&apos;</span>
                 <br /><br />
                 <span className="text-[#67E8F9]">&lt;Button</span>
-                <span className="text-[var(--forge-text-secondary)]"> variant=</span>
+                <span className="text-[var(--gridnest-text-secondary)]"> variant=</span>
                 <span className="text-[#86EFAC]">&quot;{activeVariant}&quot;</span>
                 <span className="text-[#67E8F9]">&gt;</span>
-                <span className="text-[var(--forge-text-secondary)]">Click me</span>
+                <span className="text-[var(--gridnest-text-secondary)]">Click me</span>
                 <span className="text-[#67E8F9]">&lt;/Button&gt;</span>
               </div>
             </div>
@@ -184,7 +184,7 @@ export function Hero() {
             {/* Decorative dots */}
             <div className="absolute -right-4 -top-4 grid grid-cols-4 gap-1.5">
               {Array.from({ length: 16 }).map((_, i) => (
-                <div key={i} className="h-1 w-1 rounded-full bg-[var(--forge-border)]" />
+                <div key={i} className="h-1 w-1 rounded-full bg-[var(--gridnest-border)]" />
               ))}
             </div>
           </motion.div>
@@ -193,17 +193,17 @@ export function Hero() {
         {/* Stats row */}
         <motion.div
           variants={shouldReduceMotion ? undefined : fadeUp}
-          className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-px border border-[var(--forge-border)] rounded-[var(--forge-radius-lg)] overflow-hidden"
+          className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-px border border-[var(--gridnest-border)] rounded-[var(--gridnest-radius-lg)] overflow-hidden"
         >
           {STATS.map((stat) => (
             <div
               key={stat.label}
-              className="flex flex-col items-center justify-center py-6 bg-[var(--forge-surface)] hover:bg-[var(--forge-surface-2)] transition-colors"
+              className="flex flex-col items-center justify-center py-6 bg-[var(--gridnest-surface)] hover:bg-[var(--gridnest-surface-2)] transition-colors"
             >
-              <span className="font-sans text-2xl font-bold text-[var(--forge-text-primary)] tracking-tight">
+              <span className="font-sans text-2xl font-bold text-[var(--gridnest-text-primary)] tracking-tight">
                 {stat.value}
               </span>
-              <span className="mt-1 text-xs text-[var(--forge-text-muted)]">{stat.label}</span>
+              <span className="mt-1 text-xs text-[var(--gridnest-text-muted)]">{stat.label}</span>
             </div>
           ))}
         </motion.div>

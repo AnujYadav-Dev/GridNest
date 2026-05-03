@@ -16,7 +16,7 @@ const Accordion = forwardRef<React.ElementRef<typeof AccordionPrimitive.Root>, A
         ref={ref}
         type={type as any}
         collapsible={type === 'single' ? true : undefined}
-        className={twMerge(clsx("w-full rounded-[var(--forge-radius-md)] border border-[var(--forge-border)] bg-[var(--forge-surface-2)] overflow-hidden", className))}
+        className={twMerge(clsx("w-full rounded-[var(--gridnest-radius-md)] border border-[var(--gridnest-border)] bg-[var(--gridnest-surface-2)] overflow-hidden", className))}
         {...props}
       >
         {items.map((item, index) => (
@@ -25,24 +25,24 @@ const Accordion = forwardRef<React.ElementRef<typeof AccordionPrimitive.Root>, A
             value={item.value}
             className={clsx(
               "overflow-hidden focus-within:relative focus-within:z-10",
-              index < items.length - 1 && "border-b border-[var(--forge-border)]"
+              index < items.length - 1 && "border-b border-[var(--gridnest-border)]"
             )}
           >
             <AccordionPrimitive.Header className="flex">
               <AccordionPrimitive.Trigger
                 className={clsx(
-                  "flex flex-1 items-center justify-between py-4 px-5 text-sm font-medium font-body transition-all hover:bg-[var(--forge-surface)] text-[var(--forge-text-primary)]",
-                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--forge-accent)] focus-visible:ring-inset",
+                  "flex flex-1 items-center justify-between py-4 px-5 text-sm font-medium font-body transition-all hover:bg-[var(--gridnest-surface)] text-[var(--gridnest-text-primary)]",
+                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gridnest-accent)] focus-visible:ring-inset",
                   "[&[data-state=open]>svg]:rotate-180"
                 )}
               >
                 {item.trigger}
-                <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-300 ease-[var(--forge-ease-spring)] text-[var(--forge-text-secondary)]" />
+                <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-300 ease-[var(--gridnest-ease-spring)] text-[var(--gridnest-text-secondary)]" />
               </AccordionPrimitive.Trigger>
             </AccordionPrimitive.Header>
             <AccordionPrimitive.Content
               className={clsx(
-                "overflow-hidden text-sm font-body text-[var(--forge-text-secondary)]",
+                "overflow-hidden text-sm font-body text-[var(--gridnest-text-secondary)]",
                 "data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
               )}
             >

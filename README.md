@@ -1,11 +1,11 @@
-# ForgeUI - Editorial Precision meets Developer Utility
+# GridNest - Editorial Precision meets Developer Utility
 
-ForgeUI is a production-grade, open-source design system and component library built with Next.js 15, TypeScript, Tailwind CSS, and Framer Motion, backed by a robust Django REST API.
+GridNest is a production-grade, open-source design system and component library built with Next.js 15, TypeScript, Tailwind CSS, and Framer Motion, backed by a robust Django REST API.
 
-![ForgeUI Banner](https://raw.githubusercontent.com/AnujYadav-Dev/forgeui/main/docs/banner.png)
+![GridNest Banner](https://raw.githubusercontent.com/AnujYadav-Dev/gridnest/main/docs/banner.png)
 
 ## 🚀 Vision
-ForgeUI is designed for developers who value aesthetic precision as much as functional utility. It follows a **dark-first, typography-driven** aesthetic inspired by modern editorial design.
+GridNest is designed for developers who value aesthetic precision as much as functional utility. It follows a **dark-first, typography-driven** aesthetic inspired by modern editorial design.
 
 ## ✨ Key Features
 - **14 Production Components**: Accessible, typed, and animatable (Button, Input, Modal, Toast, etc.)
@@ -22,7 +22,7 @@ ForgeUI is designed for developers who value aesthetic precision as much as func
 
 ## 📦 Repository Structure
 ```bash
-forgeui/
+gridnest/
 ├── frontend/          # Next.js 15 Documentation & Library
 ├── backend/           # Django REST API
 └── AGENTS.md          # AI IDE Instructions & Design Standards
@@ -39,8 +39,8 @@ forgeui/
 
 1. **Clone the repo**
    ```bash
-   git clone https://github.com/AnujYadav-Dev/forgeui.git
-   cd forgeui
+   git clone https://github.com/AnujYadav-Dev/gridnest.git
+   cd gridnest
    ```
 
 2. **Setup Frontend**
@@ -68,4 +68,4 @@ All components follow the standards defined in `AGENTS.md`. Key principles inclu
 - WCAG 2.1 accessibility compliance.
 
 ## 📄 License
-MIT License. Created by the ForgeUI Team.
+MIT License. Created by the GridNest Team.

@@ -1,6 +1,6 @@
-# ForgeUI - Backend API
+# GridNest - Backend API
 
-This is the Django-based REST API for the ForgeUI design system. It handles user authentication, component bookmarking, and custom theme persistence.
+This is the Django-based REST API for the GridNest design system. It handles user authentication, component bookmarking, and custom theme persistence.
 
 ## 🛠 Tech Stack
 - **Framework**: Django 5.x
@@ -16,7 +16,7 @@ backend/
 ├── apps/
 │   ├── accounts/      # Custom User model, JWT Auth (Login/Register)
 │   └── library/       # Components, SavedComponents, ThemeConfigs
-├── forgeui/           # Project settings (Modular: base, dev, prod)
+├── gridnest/           # Project settings (Modular: base, dev, prod)
 ├── manage.py
 ├── Procfile           # Railway deployment config
 └── requirements.txt
@@ -28,7 +28,7 @@ Create a `.env` file in the `backend/` directory:
 SECRET_KEY=your_django_secret_key
 DEBUG=True
 ALLOWED_HOSTS=localhost,127.0.0.1
-DATABASE_URL=postgres://user:pass@localhost:5432/forgeui
+DATABASE_URL=postgres://user:pass@localhost:5432/gridnest
 CORS_ALLOWED_ORIGINS=http://localhost:3000
 ```
 

@@ -12,35 +12,35 @@ function GithubIcon({ size = 14 }: { size?: number }) {
 
 export function Footer() {
   return (
-    <footer className="border-t border-[var(--forge-border)] bg-[var(--forge-bg)] mt-auto">
+    <footer className="border-t border-[var(--gridnest-border)] bg-[var(--gridnest-bg)] mt-auto">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-8 sm:flex-row">
         <div className="flex items-center gap-2">
-          <div className="flex h-6 w-6 items-center justify-center rounded-[var(--forge-radius-sm)] bg-[var(--forge-accent)] text-white text-[10px] font-bold font-mono">
-            FG
+          <div className="flex h-6 w-6 items-center justify-center rounded-[var(--gridnest-radius-sm)] bg-[var(--gridnest-accent)] text-white text-[10px] font-bold font-mono">
+            GN
           </div>
-          <span className="text-sm font-sans font-semibold text-[var(--forge-text-primary)]">ForgeUI</span>
-          <span className="text-xs text-[var(--forge-text-muted)] ml-2">MIT License</span>
+          <span className="text-sm font-sans font-semibold text-[var(--gridnest-text-primary)]">GridNest</span>
+          <span className="text-xs text-[var(--gridnest-text-muted)] ml-2">MIT License</span>
         </div>
 
-        <p className="text-xs text-[var(--forge-text-muted)] text-center">
+        <p className="text-xs text-[var(--gridnest-text-muted)] text-center">
           Editorial precision meets developer utility - 14 production-grade components.
         </p>
 
         <div className="flex items-center gap-4">
-          <Link href="/components" className="text-xs text-[var(--forge-text-secondary)] hover:text-[var(--forge-text-primary)] transition-colors">
+          <Link href="/components" className="text-xs text-[var(--gridnest-text-secondary)] hover:text-[var(--gridnest-text-primary)] transition-colors">
             Components
           </Link>
-          <Link href="/tokens" className="text-xs text-[var(--forge-text-secondary)] hover:text-[var(--forge-text-primary)] transition-colors">
+          <Link href="/tokens" className="text-xs text-[var(--gridnest-text-secondary)] hover:text-[var(--gridnest-text-primary)] transition-colors">
             Tokens
           </Link>
-          <Link href="/motion" className="text-xs text-[var(--forge-text-secondary)] hover:text-[var(--forge-text-primary)] transition-colors">
+          <Link href="/motion" className="text-xs text-[var(--gridnest-text-secondary)] hover:text-[var(--gridnest-text-primary)] transition-colors">
             Motion
           </Link>
           <a
-            href="https://github.com/AnujYadav-Dev/forgeui"
+            href="https://github.com/AnujYadav-Dev/gridnest"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--forge-text-secondary)] hover:text-[var(--forge-text-primary)] transition-colors"
+            className="text-[var(--gridnest-text-secondary)] hover:text-[var(--gridnest-text-primary)] transition-colors"
           >
             <GithubIcon size={14} />
           </a>

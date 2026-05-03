@@ -6,10 +6,8 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='*').split(',')
 
-CORS_ALLOWED_ORIGINS = [
-    "https://forgeui.vercel.app",
-    "https://forgeui.dev"
-]
+CORS_ALLOWED_ORIGINS = config('CORS_ALLOWED_ORIGINS', default='').split(',')
+CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS', default='').split(',')
 
 DATABASES = {
     'default': dj_database_url.config(
