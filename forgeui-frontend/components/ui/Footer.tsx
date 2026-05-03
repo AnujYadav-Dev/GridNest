@@ -37,7 +37,7 @@ export function Footer() {
             Motion
           </Link>
           <a
-            href="https://github.com"
+            href="https://github.com/AnujYadav-Dev/forgeui"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[var(--forge-text-secondary)] hover:text-[var(--forge-text-primary)] transition-colors"

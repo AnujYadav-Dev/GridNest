@@ -168,4 +168,4 @@ import { fadeUp, staggerContainer } from '@/lib/motion'
 - [x] Phase 4 — Django backend
 - [x] Phase 5 — Docs site
 - [x] Phase 6 — Auth + Dashboard
-- [ ] Phase 7 — Polish + deploy
+- [x] Phase 7 — Polish + deploy

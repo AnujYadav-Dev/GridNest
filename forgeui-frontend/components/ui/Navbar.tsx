@@ -68,7 +68,7 @@ export function Navbar() {
         {/* Right side */}
         <div className="flex items-center gap-2">
           <a
-            href="https://github.com"
+            href="https://github.com/AnujYadav-Dev/forgeui"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center h-8 w-8 rounded-[var(--forge-radius-md)] text-[var(--forge-text-secondary)] hover:text-[var(--forge-text-primary)] hover:bg-[var(--forge-surface-2)] transition-colors"

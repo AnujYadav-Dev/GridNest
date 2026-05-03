@@ -18,6 +18,7 @@ export function AnimatedLayout({ children }: AnimatedLayoutProps) {
         variants={fadeUp}
         initial="hidden"
         animate="visible"
+        exit="exit"
         className="flex flex-col flex-1"
       >
         {children}

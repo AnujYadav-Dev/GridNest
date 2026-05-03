@@ -19,7 +19,9 @@ const schema = z.object({
 
 type FormValues = z.infer<typeof schema>
 
-export default function LoginPage() {
+import { Suspense } from 'react'
+
+function LoginContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const from = searchParams.get('from') ?? '/dashboard'
@@ -156,5 +158,17 @@ export default function LoginPage() {
         </motion.p>
       </motion.div>
     </motion.div>
+  )
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={
+      <div className="flex h-40 w-full items-center justify-center">
+        <div className="h-8 w-8 rounded-full border-4 border-[var(--forge-accent-subtle)] border-t-[var(--forge-accent)] animate-spin" />
+      </div>
+    }>
+      <LoginContent />
+    </Suspense>
   )
 }

@@ -19,9 +19,43 @@ const fontMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ForgeUI - Design System",
-  description: "Editorial Precision meets Developer Utility",
+  title: {
+    default: "ForgeUI — Design System & Component Library",
+    template: "%s | ForgeUI",
+  },
+  description: "A production-grade design system and component library built with Next.js 15, TypeScript, and Framer Motion. Editorial precision meets developer utility.",
+  keywords: ["Design System", "Component Library", "Next.js", "React", "Tailwind CSS", "Framer Motion", "TypeScript", "UI Kit"],
+  authors: [{ name: "ForgeUI Team" }],
+  creator: "ForgeUI",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://forgeui.dev",
+    siteName: "ForgeUI",
+    title: "ForgeUI — Design System & Component Library",
+    description: "Production-grade components with editorial precision.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "ForgeUI Preview",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ForgeUI — Design System & Component Library",
+    description: "Production-grade components with editorial precision.",
+    images: ["/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
+
+import { CustomCursor } from "../components/ui/CustomCursor";
 
 export default function RootLayout({
   children,
@@ -41,6 +75,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <CustomCursor />
           {children}
         </ThemeProvider>
       </body>

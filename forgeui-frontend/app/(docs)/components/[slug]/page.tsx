@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import { Metadata } from 'next'
 import { componentRegistry } from '@/lib/componentRegistry'
 import { PropsTable } from '@/components/docs/PropsTable'
 import { CodeBlock } from '@/components/docs/CodeBlock'
@@ -7,6 +8,22 @@ import { ArrowLeft, BookOpen, Keyboard } from 'lucide-react'
 
 interface PageProps {
   params: Promise<{ slug: string }>
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params
+  const doc = componentRegistry[slug]
+
+  if (!doc) return { title: 'Not Found' }
+
+  return {
+    title: doc.name,
+    description: doc.description,
+    openGraph: {
+      title: `${doc.name} | ForgeUI`,
+      description: doc.description,
+    }
+  }
 }
 
 export async function generateStaticParams() {
