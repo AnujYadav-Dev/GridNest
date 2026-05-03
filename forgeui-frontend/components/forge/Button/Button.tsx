@@ -29,7 +29,7 @@ const buttonVariants = cva(
 )
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps & VariantProps<typeof buttonVariants>>(
-  ({ className, variant, size, loading, children, ...props }, ref) => {
+  ({ className, variant, size, loading, children, onClick, onFocus, onBlur, onMouseEnter, onMouseLeave, onKeyDown, onKeyUp, ...props }, ref) => {
     return (
       <motion.button
         ref={ref}
@@ -38,7 +38,19 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps & VariantProps<typeof b
         whileHover={{ y: -1 }}
         transition={{ duration: 0.15, ease: [0.16, 1, 0.3, 1] }}
         disabled={loading || props.disabled}
-        {...props}
+        onClick={onClick as React.MouseEventHandler<HTMLButtonElement>}
+        onFocus={onFocus as React.FocusEventHandler<HTMLButtonElement>}
+        onBlur={onBlur as React.FocusEventHandler<HTMLButtonElement>}
+        onMouseEnter={onMouseEnter as React.MouseEventHandler<HTMLButtonElement>}
+        onMouseLeave={onMouseLeave as React.MouseEventHandler<HTMLButtonElement>}
+        onKeyDown={onKeyDown as React.KeyboardEventHandler<HTMLButtonElement>}
+        onKeyUp={onKeyUp as React.KeyboardEventHandler<HTMLButtonElement>}
+        type={props.type ?? 'button'}
+        aria-label={props['aria-label']}
+        id={props.id}
+        name={props.name}
+        value={props.value}
+        form={props.form}
       >
         {loading && <Loader2 className="animate-spin" size={size === 'sm' ? 14 : size === 'lg' ? 20 : 16} />}
         {children}

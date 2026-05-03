@@ -166,6 +166,6 @@ import { fadeUp, staggerContainer } from '@/lib/motion'
 - [x] Phase 2 — Tokens + global styles
 - [x] Phase 3 — Component library (14 components)
 - [x] Phase 4 — Django backend
-- [ ] Phase 5 — Docs site
-- [ ] Phase 6 — Auth + Dashboard
+- [x] Phase 5 — Docs site
+- [x] Phase 6 — Auth + Dashboard
 - [ ] Phase 7 — Polish + deploy

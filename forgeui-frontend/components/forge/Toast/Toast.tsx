@@ -40,7 +40,7 @@ const Toast = forwardRef<HTMLDivElement, ToastProps>(
             initial={{ opacity: 0, y: 50, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95, transition: { duration: 0.2 } }}
-            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
             className={twMerge(
               clsx(
                 "group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-[var(--forge-radius-lg)] border p-4 shadow-[var(--forge-shadow-md)] transition-all",
@@ -51,7 +51,9 @@ const Toast = forwardRef<HTMLDivElement, ToastProps>(
                 className
               )
             )}
-            {...props}
+            id={props.id}
+            role={props.role}
+            aria-label={props['aria-label']}
           >
             <div className="flex w-full items-start gap-3">
               <Icon className="mt-0.5 h-5 w-5 shrink-0" />
