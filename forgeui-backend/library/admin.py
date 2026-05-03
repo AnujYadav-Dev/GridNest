@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import Component, SavedComponent, ThemeConfig
 
-# Register your models here.
+admin.site.register(Component)
+admin.site.register(SavedComponent)
+admin.site.register(ThemeConfig)
