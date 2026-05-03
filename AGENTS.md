@@ -163,7 +163,7 @@ import { fadeUp, staggerContainer } from '@/lib/motion'
 ## Phase Map (current progress tracker)
 
 - [x] Phase 1 — Scaffolding
-- [ ] Phase 2 — Tokens + global styles
+- [x] Phase 2 — Tokens + global styles
 - [ ] Phase 3 — Component library (14 components)
 - [ ] Phase 4 — Django backend
 - [ ] Phase 5 — Docs site
