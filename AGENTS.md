@@ -72,20 +72,20 @@ forgeui/
 
 | # | Component | Status |
 |---|---|---|
-| 1 | Button | [ ] |
-| 2 | Badge | [ ] |
-| 3 | Avatar | [ ] |
-| 4 | Skeleton | [ ] |
-| 5 | Progress | [ ] |
-| 6 | Toggle | [ ] |
-| 7 | Input | [ ] |
-| 8 | Tooltip | [ ] |
-| 9 | Dropdown | [ ] |
-| 10 | Tabs | [ ] |
-| 11 | Accordion | [ ] |
-| 12 | Card | [ ] |
-| 13 | Toast | [ ] |
-| 14 | Modal | [ ] |
+| 1 | Button | [x] |
+| 2 | Badge | [x] |
+| 3 | Avatar | [x] |
+| 4 | Skeleton | [x] |
+| 5 | Progress | [x] |
+| 6 | Toggle | [x] |
+| 7 | Input | [x] |
+| 8 | Tooltip | [x] |
+| 9 | Dropdown | [x] |
+| 10 | Tabs | [x] |
+| 11 | Accordion | [x] |
+| 12 | Card | [x] |
+| 13 | Toast | [x] |
+| 14 | Modal | [x] |
 
 ---
 
@@ -164,7 +164,7 @@ import { fadeUp, staggerContainer } from '@/lib/motion'
 
 - [x] Phase 1 — Scaffolding
 - [x] Phase 2 — Tokens + global styles
-- [ ] Phase 3 — Component library (14 components)
+- [x] Phase 3 — Component library (14 components)
 - [ ] Phase 4 — Django backend
 - [ ] Phase 5 — Docs site
 - [ ] Phase 6 — Auth + Dashboard
