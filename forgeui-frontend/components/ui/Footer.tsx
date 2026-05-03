@@ -23,7 +23,7 @@ export function Footer() {
         </div>
 
         <p className="text-xs text-[var(--forge-text-muted)] text-center">
-          Editorial precision meets developer utility — 14 production-grade components.
+          Editorial precision meets developer utility - 14 production-grade components.
         </p>
 
         <div className="flex items-center gap-4">

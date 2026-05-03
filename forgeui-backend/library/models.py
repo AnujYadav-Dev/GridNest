@@ -2,7 +2,7 @@ from django.db import models
 from accounts.models import CustomUser
 
 class Component(models.Model):
-    """Seeded component metadata — read-only from frontend"""
+    """Seeded component metadata - read-only from frontend"""
     slug = models.SlugField(unique=True)
     name = models.CharField(max_length=100)
     category = models.CharField(max_length=50)
@@ -35,4 +35,4 @@ class ThemeConfig(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f"{self.user.username} — {self.name}"
+        return f"{self.user.username} - {self.name}"

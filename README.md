@@ -1,4 +1,4 @@
-# ForgeUI — Editorial Precision meets Developer Utility
+# ForgeUI - Editorial Precision meets Developer Utility
 
 ForgeUI is a production-grade, open-source design system and component library built with Next.js 15, TypeScript, Tailwind CSS, and Framer Motion, backed by a robust Django REST API.
 

@@ -20,7 +20,7 @@ const fontMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "ForgeUI — Design System & Component Library",
+    default: "ForgeUI - Design System & Component Library",
     template: "%s | ForgeUI",
   },
   description: "A production-grade design system and component library built with Next.js 15, TypeScript, and Framer Motion. Editorial precision meets developer utility.",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://forgeui.dev",
     siteName: "ForgeUI",
-    title: "ForgeUI — Design System & Component Library",
+    title: "ForgeUI - Design System & Component Library",
     description: "Production-grade components with editorial precision.",
     images: [
       {
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ForgeUI — Design System & Component Library",
+    title: "ForgeUI - Design System & Component Library",
     description: "Production-grade components with editorial precision.",
     images: ["/og-image.png"],
   },

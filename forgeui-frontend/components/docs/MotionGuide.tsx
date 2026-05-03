@@ -66,7 +66,7 @@ export default function MotionPage() {
         </motion.h1>
         <motion.p variants={shouldReduceMotion ? undefined : fadeUp} className="text-[var(--forge-text-secondary)] max-w-md">
           Motion should be felt, not seen. All animation variants live in{' '}
-          <code className="font-mono text-xs text-[var(--forge-accent)]">lib/motion.ts</code> —
+          <code className="font-mono text-xs text-[var(--forge-accent)]">lib/motion.ts</code> -
           never defined inline in components.
         </motion.p>
       </motion.div>

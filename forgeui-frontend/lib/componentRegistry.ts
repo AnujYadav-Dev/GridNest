@@ -97,7 +97,7 @@ export default function Example() {
   )
 }`,
     props: [
-      { name: 'src', type: 'string', description: 'Image URL — shows fallback if undefined or fails' },
+      { name: 'src', type: 'string', description: 'Image URL - shows fallback if undefined or fails' },
       { name: 'alt', type: 'string', description: 'Alt text for the avatar image' },
       { name: 'fallback', type: 'string', description: 'Initials or text shown when image is unavailable' },
       { name: 'size', type: "'sm' | 'md' | 'lg' | 'xl'", default: "'md'", description: 'Avatar diameter' },
@@ -134,7 +134,7 @@ export default function Example() {
     props: [
       { name: 'label', type: 'string', description: 'Visible label above the input' },
       { name: 'helper', type: 'string', description: 'Helper text shown below the input' },
-      { name: 'error', type: 'string', description: 'Error message — replaces helper text and applies error styling' },
+      { name: 'error', type: 'string', description: 'Error message - replaces helper text and applies error styling' },
       { name: 'leftIcon', type: 'React.ReactNode', description: 'Icon element rendered on the left side' },
       { name: 'rightIcon', type: 'React.ReactNode', description: 'Icon element rendered on the right side' },
       { name: 'type', type: 'string', default: "'text'", description: 'HTML input type' },
@@ -304,7 +304,7 @@ export default function Example() {
     ],
     variants: ['horizontal', 'vertical'],
     accessibilityNotes: [
-      'Uses Radix Tabs — full keyboard navigation (Arrow keys, Home, End)',
+      'Uses Radix Tabs - full keyboard navigation (Arrow keys, Home, End)',
       'Active tab has aria-selected="true"',
       'Tab panels use role="tabpanel"',
     ],
@@ -510,7 +510,7 @@ export default function Example() {
     variants: ['top', 'right', 'bottom', 'left'],
     accessibilityNotes: [
       'Radix Tooltip provides aria-describedby linking trigger to content',
-      'Keyboard accessible — opens on focus',
+      'Keyboard accessible - opens on focus',
       'Closes on Escape or blur',
     ],
     related: ['badge', 'button'],

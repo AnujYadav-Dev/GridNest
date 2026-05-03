@@ -78,12 +78,12 @@ export function Hero() {
         >
           <span className="inline-flex items-center gap-1.5 rounded-full border border-[var(--forge-border)] bg-[var(--forge-surface)] px-3 py-1 text-xs text-[var(--forge-text-secondary)]">
             <Zap size={10} className="text-[var(--forge-accent)]" />
-            14 production-grade components — copy-paste ready
+            14 production-grade components - copy-paste ready
           </span>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Left — Typography */}
+          {/* Left - Typography */}
           <div>
             <motion.h1
               variants={shouldReduceMotion ? undefined : fadeUp}
@@ -132,13 +132,13 @@ export function Hero() {
                 id="hero-github-btn"
                 className="inline-flex items-center gap-2 h-11 px-5 rounded-[var(--forge-radius-md)] border border-[var(--forge-border)] text-[var(--forge-text-secondary)] text-sm font-medium hover:text-[var(--forge-text-primary)] hover:border-[var(--forge-border-hover)] transition-colors"
               >
-              <GithubIcon size={14} />
+                <GithubIcon size={14} />
                 View on GitHub
               </a>
             </motion.div>
           </div>
 
-          {/* Right — Live Component Preview */}
+          {/* Right - Live Component Preview */}
           <motion.div
             variants={shouldReduceMotion ? undefined : scaleIn}
             className="relative"
@@ -148,7 +148,7 @@ export function Hero() {
                 Live preview
               </p>
               <p className="mb-6 text-xs text-[var(--forge-text-secondary)]">
-                Button — variant: <code className="font-mono text-[var(--forge-accent)]">{activeVariant}</code>
+                Button - variant: <code className="font-mono text-[var(--forge-accent)]">{activeVariant}</code>
               </p>
 
               <div className="flex flex-wrap gap-3 mb-8">
@@ -157,9 +157,8 @@ export function Hero() {
                     key={v}
                     id={`hero-variant-${v}`}
                     onClick={() => setActiveVariant(v)}
-                    className={`h-9 px-4 text-sm font-medium rounded-[var(--forge-radius-md)] transition-all duration-200 ${variantStyles[v]} ${
-                      activeVariant === v ? 'ring-2 ring-[var(--forge-accent)] ring-offset-2 ring-offset-[var(--forge-surface)]' : ''
-                    }`}
+                    className={`h-9 px-4 text-sm font-medium rounded-[var(--forge-radius-md)] transition-all duration-200 ${variantStyles[v]} ${activeVariant === v ? 'ring-2 ring-[var(--forge-accent)] ring-offset-2 ring-offset-[var(--forge-surface)]' : ''
+                      }`}
                   >
                     {v.charAt(0).toUpperCase() + v.slice(1)}
                   </button>

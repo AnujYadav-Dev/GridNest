@@ -26,9 +26,8 @@ export function PropsTable({ props }: PropsTableProps) {
           {props.map((prop, i) => (
             <tr
               key={prop.name}
-              className={`border-b border-[var(--forge-border)] last:border-0 ${
-                i % 2 === 0 ? 'bg-[var(--forge-bg)]' : 'bg-[var(--forge-surface)]'
-              }`}
+              className={`border-b border-[var(--forge-border)] last:border-0 ${i % 2 === 0 ? 'bg-[var(--forge-bg)]' : 'bg-[var(--forge-surface)]'
+                }`}
             >
               <td className="px-4 py-3">
                 <code className="rounded px-1.5 py-0.5 text-xs bg-[var(--forge-surface-2)] text-[var(--forge-accent)] font-mono">
@@ -42,7 +41,7 @@ export function PropsTable({ props }: PropsTableProps) {
                 {prop.default ? (
                   <code className="text-xs text-[var(--forge-text-muted)] font-mono">{prop.default}</code>
                 ) : (
-                  <span className="text-[var(--forge-text-muted)]">—</span>
+                  <span className="text-[var(--forge-text-muted)]">-</span>
                 )}
               </td>
               <td className="px-4 py-3">
