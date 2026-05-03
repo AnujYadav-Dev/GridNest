@@ -1,0 +1,79 @@
+:root {
+  color-scheme: light;
+
+  /* Color - Base */
+  --gridnest-bg: #F8FAFC;
+  --gridnest-surface: #FFFFFF;
+  --gridnest-surface-2: #EEF2F7;
+  --gridnest-border: #D9E2EC;
+  --gridnest-border-hover: #B8C5D3;
+
+  /* Color - Text */
+  --gridnest-text-primary: #111827;
+  --gridnest-text-secondary: #4B5563;
+  --gridnest-text-muted: #94A3B8;
+
+  /* Color - Accent */
+  --gridnest-accent: #6366F1;
+  /* Indigo - primary brand */
+  --gridnest-accent-hover: #818CF8;
+  --gridnest-accent-subtle: #6366F120;
+  --gridnest-success: #22C55E;
+  --gridnest-warning: #F59E0B;
+  --gridnest-danger: #EF4444;
+
+  /* Typography */
+  --gridnest-font-sans: 'Syne', sans-serif;
+  /* Display headings */
+  --gridnest-font-body: 'DM Sans', sans-serif;
+  /* Body text */
+  --gridnest-font-mono: 'JetBrains Mono', monospace;
+  /* Code blocks */
+
+  /* Spacing scale */
+  --gridnest-space-1: 4px;
+  --gridnest-space-2: 8px;
+  --gridnest-space-3: 12px;
+  --gridnest-space-4: 16px;
+  --gridnest-space-6: 24px;
+  --gridnest-space-8: 32px;
+  --gridnest-space-12: 48px;
+  --gridnest-space-16: 64px;
+
+  /* Radius */
+  --gridnest-radius-sm: 4px;
+  --gridnest-radius-md: 8px;
+  --gridnest-radius-lg: 12px;
+  --gridnest-radius-xl: 16px;
+  --gridnest-radius-full: 9999px;
+
+  /* Shadow */
+  --gridnest-shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08);
+  --gridnest-shadow-md: 0 12px 30px rgba(15, 23, 42, 0.12);
+  --gridnest-shadow-glow: 0 0 24px rgba(99, 102, 241, 0.16);
+
+  /* Motion */
+  --gridnest-duration-fast: 150ms;
+  --gridnest-duration-normal: 250ms;
+  --gridnest-duration-slow: 400ms;
+  --gridnest-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --gridnest-ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.dark {
+  color-scheme: dark;
+
+  --gridnest-bg: #0A0A0B;
+  --gridnest-surface: #111113;
+  --gridnest-surface-2: #1A1A1E;
+  --gridnest-border: #2A2A2E;
+  --gridnest-border-hover: #3A3A3E;
+
+  --gridnest-text-primary: #F0F0F2;
+  --gridnest-text-secondary: #8A8A92;
+  --gridnest-text-muted: #4A4A52;
+
+  --gridnest-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --gridnest-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
+  --gridnest-shadow-glow: 0 0 24px rgba(99, 102, 241, 0.2);
+}
